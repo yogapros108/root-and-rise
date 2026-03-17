@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Pros — Stop Surviving. Start Thriving.</title>
+    <meta name="description" content="You change lives on the mat — but you can't pay your rent. Yoga Pros helps 10,000+ teachers build sustainable careers with the highest standards, Live CV, insurance, and a community that gets it.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --teal: #0D9B8C;
+            --teal-dark: #0A7F73;
+            --teal-light: #E3FFF8;
+            --teal-pale: #F0FBF8;
+            --yellow: #FFC82A;
+            --yellow-light: #FFF4D6;
+            --charcoal: #1A1A2E;
+            --text: #2D3436;
+            --text-light: #636E72;
+            --white: #FFFFFF;
+            --off-white: #FAFCFB;
+            --border: #E8EFED;
+            --red-soft: #FDE8E8;
+            --red: #E74C3C;
+            --purple: #7C3AED;
+            --purple-light: #EDE9FE;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', -apple-system, 'Segoe UI', sans-serif;
+            color: var(--text); line-height: 1.6;
+            background: var(--white); overflow-x: hidden;
+        }
+
+        /* UTILITIES */
+        .container { max-width: 1100px; margin: 0 auto; }
+        section { padding: 5.5rem 2.5rem; }
+        .section-label {
+            display: inline-block; font-size: 0.75rem; font-weight: 700;
+            color: var(--teal); text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 0.8rem;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--teal); color: var(--white);
+            padding: 1rem 2rem; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 1rem;
+            border: none; cursor: pointer; transition: all 0.3s; font-family: inherit;
+        }
+        .btn-primary:hover {
+            background: var(--teal-dark); transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(13,155,140,0.3);
+        }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--white); color: var(--teal);
+            padding: 1rem 2rem; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 1rem;
+            border: 2px solid var(--teal); transition: all 0.3s;
+        }
+        .btn-secondary:hover { background: var(--teal-light); transform: translateY(-2px); }
+
+        /* ANNOUNCEMENT */
+        .announcement {
+            background: var(--charcoal); color: var(--white);
+            text-align: center; padding: 0.6rem 1rem;
+            font-size: 0.82rem; font-weight: 500;
+        }
+        .announcement a { color: var(--yellow); text-decoration: underline; font-weight: 700; }
+
+        /* NAV */
+        nav {
+            position: sticky; top: 0; width: 100%; z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2.5rem;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--charcoal); text-decoration: none; letter-spacing: -0.5px; }
+        .logo span { color: var(--teal); }
+        .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--teal); }
+        .nav-links .btn-nav {
+            background: var(--teal); color: var(--white);
+            padding: 0.65rem 1.6rem; border-radius: 50px; font-weight: 700;
+            transition: all 0.3s;
+        }
+        .nav-links .btn-nav:hover { background: var(--teal-dark); color: var(--white); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); margin: 5px 0; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 92vh; display: flex; align-items: center;
+            padding: 4rem 2.5rem;
+            background: linear-gradient(170deg, var(--charcoal) 0%, #1a2a3a 50%, #0d1b2a 100%);
+            position: relative; overflow: hidden; color: var(--white);
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(13,155,140,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,200,42,0.08) 0%, transparent 50%);
+        }
+        .hero-inner {
+            max-width: 1100px; margin: 0 auto; width: 100%;
+            display: grid; grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem; align-items: center; position: relative; z-index: 1;
+        }
+        .hero-text h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 800; line-height: 1.12; letter-spacing: -1.5px; margin-bottom: 1.5rem;
+        }
+        .hero-text h1 .highlight { color: var(--yellow); }
+        .hero-text .hero-sub {
+            font-size: 1.15rem; color: rgba(255,255,255,0.7);
+            max-width: 500px; margin-bottom: 0.8rem; line-height: 1.7;
+        }
+        .hero-stat-line {
+            font-size: 0.9rem; color: rgba(255,255,255,0.45);
+            margin-bottom: 2rem; font-weight: 500;
+        }
+        .hero-stat-line strong { color: var(--yellow); }
+        .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .hero-ctas .btn-primary {
+            background: var(--yellow); color: var(--charcoal);
+            font-size: 1.05rem; padding: 1.1rem 2.2rem;
+        }
+        .hero-ctas .btn-primary:hover { background: #e6b425; box-shadow: 0 6px 24px rgba(255,200,42,0.3); }
+        .hero-ctas .btn-secondary { border-color: rgba(255,255,255,0.3); color: var(--white); }
+        .hero-ctas .btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+        .hero-urgency {
+            font-size: 0.85rem; color: rgba(255,255,255,0.45);
+            font-style: italic;
+        }
+
+        /* LIVE CV PREVIEW */
+        .live-cv-preview {
+            background: var(--white); border-radius: 20px; overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3); color: var(--text);
+            transform: perspective(1200px) rotateY(-3deg) rotateX(1deg);
+            transition: transform 0.5s;
+        }
+        .live-cv-preview:hover { transform: perspective(1200px) rotateY(0deg) rotateX(0deg); }
+        .cv-header {
+            background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+            padding: 1.5rem 1.8rem; color: var(--white);
+            display: flex; align-items: center; gap: 1rem;
+        }
+        .cv-avatar {
+            width: 52px; height: 52px; background: rgba(255,255,255,0.2);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; font-weight: 800; border: 2px solid rgba(255,255,255,0.4);
+        }
+        .cv-name { font-size: 1.1rem; font-weight: 700; }
+        .cv-title { font-size: 0.78rem; opacity: 0.8; }
+        .cv-body { padding: 1.5rem 1.8rem; }
+        .cv-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+        .cv-badge {
+            font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.7rem;
+            border-radius: 50px; background: var(--teal-light); color: var(--teal);
+        }
+        .cv-badge.gold { background: var(--yellow-light); color: #B8860B; }
+        .cv-badge.verified { background: var(--teal); color: var(--white); }
+        .cv-badge.safety { background: #E8F8F0; color: #27AE60; }
+        .cv-section-label {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--text-light);
+            margin-bottom: 0.5rem; margin-top: 1rem;
+        }
+        .cv-specialisms { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .cv-spec {
+            font-size: 0.72rem; font-weight: 500; padding: 0.25rem 0.6rem;
+            border-radius: 6px; background: var(--off-white); color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .cv-stats {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem; margin-top: 1.2rem;
+            padding-top: 1.2rem; border-top: 1px solid var(--border);
+        }
+        .cv-stat { text-align: center; }
+        .cv-stat strong { display: block; font-size: 1.1rem; font-weight: 800; color: var(--teal); }
+        .cv-stat span { font-size: 0.68rem; color: var(--text-light); font-weight: 500; }
+        .cv-open {
+            margin-top: 1.2rem; padding: 0.7rem 1rem;
+            background: #F0FBF8; border: 1px solid #c8ede5; border-radius: 10px;
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.78rem; color: var(--teal); font-weight: 600;
+        }
+        .cv-open .dot {
+            width: 8px; height: 8px; background: #27AE60;
+            border-radius: 50%; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .cv-float-card {
+            background: var(--white); border-radius: 16px;
+            padding: 1.2rem 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border: 1px solid var(--border); position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .cv-float-card.notification {
+            top: -10px; right: -10px; font-size: 0.82rem;
+            font-weight: 600; color: var(--teal);
+            display: flex; align-items: center; gap: 0.5rem; animation-delay: 0.5s;
+        }
+        .cv-float-card.opportunity { bottom: 30px; left: -20px; font-size: 0.82rem; animation-delay: 1s; }
+        .opp-badge {
+            display: inline-block; background: #E8F8F0; color: #27AE60;
+            font-size: 0.7rem; font-weight: 700;
+            padding: 0.2rem 0.6rem; border-radius: 50px; margin-bottom: 0.3rem;
+        }
+        .opp-title { font-weight: 700; color: var(--charcoal); font-size: 0.85rem; }
+        .opp-detail { font-size: 0.75rem; color: var(--text-light); }
+
+        /* ===== THE TRAP ===== */
+        .trap { background: var(--off-white); }
+        .trap-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+        .trap h2 {
+            font-size: 2rem; font-weight: 800; color: var(--charcoal);
+            letter-spacing: -1px; margin-bottom: 1.2rem; line-height: 1.2;
+        }
+        .trap-inner > p {
+            font-size: 1.05rem; color: var(--text-light);
+            max-width: 600px; margin: 0 auto 3rem; line-height: 1.7;
+        }
+        .trap-cards {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem; text-align: left;
+        }
+        .trap-card {
+            background: var(--white); padding: 2rem; border-radius: 16px;
+            border: 1px solid var(--border); transition: all 0.3s;
+        }
+        .trap-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+        .trap-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .trap-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+        .trap-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+        .trap-quote {
+            margin-top: 3rem; padding: 2rem; background: var(--white);
+            border-radius: 16px; border-left: 4px solid var(--yellow);
+            max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;
+        }
+        .trap-quote blockquote {
+            font-size: 1rem; font-style: italic; color: var(--text);
+            line-height: 1.7; margin-bottom: 0.5rem;
+        }
+        .trap-quote cite { font-style: normal; font-size: 0.85rem; color: var(--text-light); }
+
+        /* ===== MARKET TRUTH ===== */
+        .market-truth {
+            background: var(--teal); color: var(--white);
+            text-align: center; padding: 3.5rem 2.5rem;
+        }
+        .market-truth h3 {
+            font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem;
+            letter-spacing: -0.5px;
+        }
+        .market-truth p {
+            font-size: 1.05rem; opacity: 0.85; max-width: 600px;
+            margin: 0 auto; line-height: 1.6;
+        }
+        .market-truth .source {
+            font-size: 0.78rem; opacity: 0.5; margin-top: 0.8rem;
+        }
+
+        /* ===== WHAT TEACHERS WANT ===== */
+        .wants { background: var(--white); }
+        .wants-header { text-align: center; margin-bottom: 3.5rem; }
+        .wants-header h2 {
+            font-size: 2rem; font-weight: 800; color: var(--charcoal);
+            letter-spacing: -1px; margin-bottom: 0.5rem; line-height: 1.2;
+        }
+        .wants-header p { font-size: 1.05rem; color: var(--text-light); }
+        .wants-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+        }
+        .want-card {
+            text-align: center; padding: 2.5rem 1.5rem; border-radius: 20px;
+            border: 2px solid var(--border); transition: all 0.3s; position: relative;
+        }
+        .want-card:hover { border-color: var(--teal); transform: translateY(-3px); }
+        .want-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem; margin: 0 auto 1.2rem;
+        }
+        .want-card:nth-child(1) .want-icon { background: var(--teal-light); }
+        .want-card:nth-child(2) .want-icon { background: var(--yellow-light); }
+        .want-card:nth-child(3) .want-icon { background: var(--purple-light); }
+        .want-card:nth-child(4) .want-icon { background: #E8F8F0; }
+        .want-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+        .want-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; margin-bottom: 0.8rem; }
+        .want-delivers {
+            font-size: 0.78rem; font-weight: 600; color: var(--teal);
+            background: var(--teal-light); padding: 0.3rem 0.8rem;
+            border-radius: 50px; display: inline-block;
+        }
+
+        /* ===== MINDSET SHIFT ===== */
+        .mindset { background: var(--off-white); }
+        .mindset-inner { max-width: 900px; margin: 0 auto; }
+        .mindset-header { text-align: center; margin-bottom: 3rem; }
+        .mindset-header h2 {
+            font-size: 2rem; font-weight: 800; color: var(--charcoal);
+            letter-spacing: -1px; margin-bottom: 0.8rem; line-height: 1.2;
+        }
+        .mindset-header p {
+            font-size: 1.05rem; color: var(--text-light);
+            max-width: 580px; margin: 0 auto; line-height: 1.7;
+        }
+        .mindset-shift {
+            display: grid; grid-template-columns: 1fr auto 1fr;
+            gap: 2rem; align-items: center;
+        }
+        .mindset-col { padding: 2.5rem; border-radius: 20px; text-align: center; }
+        .mindset-col.scarcity { background: var(--red-soft); border: 1px solid #f5c6c6; }
+        .mindset-col.abundance { background: var(--teal-light); border: 1px solid #b8e6de; }
+        .mindset-col h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; }
+        .mindset-col.scarcity h3 { color: var(--red); }
+        .mindset-col.abundance h3 { color: var(--teal); }
+        .mindset-col ul { list-style: none; padding: 0; text-align: left; }
+        .mindset-col li {
+            padding: 0.5rem 0; font-size: 0.9rem; color: var(--text);
+            display: flex; align-items: baseline; gap: 0.6rem;
+        }
+        .mindset-col.scarcity li::before { content: '\2717'; color: var(--red); font-weight: 700; font-size: 0.8rem; }
+        .mindset-col.abundance li::before { content: '\2713'; color: var(--teal); font-weight: 700; font-size: 0.8rem; }
+        .mindset-arrow { font-size: 2rem; color: var(--text-light); font-weight: 300; }
+        .mindset-bottom { text-align: center; margin-top: 3rem; }
+        .mindset-bottom p {
+            font-size: 1.1rem; font-weight: 600; color: var(--charcoal);
+            max-width: 550px; margin: 0 auto 1.5rem; line-height: 1.5;
+        }
+
+        /* ===== THREE PILLARS ===== */
+        .pillars { background: var(--charcoal); color: var(--white); }
+        .pillars-header { text-align: center; margin-bottom: 3.5rem; }
+        .pillars-header .section-label { color: var(--yellow); }
+        .pillars-header h2 { font-size: 2rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.8rem; }
+        .pillars-header p { font-size: 1.05rem; color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .pillar-card {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px; padding: 2.5rem 2rem; transition: all 0.3s;
+            position: relative; overflow: hidden;
+        }
+        .pillar-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-3px); }
+        .pillar-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+        }
+        .pillar-card.teaching::before { background: var(--teal); }
+        .pillar-card.business::before { background: var(--yellow); }
+        .pillar-card.wellbeing::before { background: linear-gradient(90deg, #a78bfa, #818cf8); }
+        .pillar-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .pillar-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .pillar-card .pillar-desc {
+            font-size: 0.9rem; color: rgba(255,255,255,0.55);
+            margin-bottom: 1.5rem; line-height: 1.6;
+        }
+        .pillar-path { padding: 0; list-style: none; }
+        .pillar-path li {
+            padding: 0.5rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.7);
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .pillar-path li .path-dot {
+            width: 10px; height: 10px; min-width: 10px;
+            border-radius: 50%; border: 2px solid rgba(255,255,255,0.3);
+        }
+        .pillar-path li.active .path-dot { background: var(--teal); border-color: var(--teal); }
+        .pillar-card.business .pillar-path li.active .path-dot { background: var(--yellow); border-color: var(--yellow); }
+        .pillar-card.wellbeing .pillar-path li.active .path-dot { background: #a78bfa; border-color: #a78bfa; }
+        .pillar-note {
+            margin-top: 1rem; font-size: 0.78rem;
+            color: rgba(255,255,255,0.35); font-style: italic;
+        }
+
+        /* ===== SAFETY ===== */
+        .safety { background: var(--white); }
+        .safety-inner {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: center;
+        }
+        .safety-text h2 {
+            font-size: 2rem; font-weight: 800; color: var(--charcoal);
+            letter-spacing: -1px; margin-bottom: 1rem; line-height: 1.2;
+        }
+        .safety-text > p {
+            font-size: 1.05rem; color: var(--text-light);
+            margin-bottom: 2rem; line-height: 1.7;
+        }
+        .safety-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+        }
+        .safety-card {
+            padding: 1.5rem; border-radius: 14px;
+            border: 1px solid var(--border); transition: all 0.3s;
+        }
+        .safety-card:hover { border-color: var(--teal); background: var(--teal-pale); }
+        .safety-card .s-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .safety-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.3rem; }
+        .safety-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+        .insurance-highlight {
+            background: var(--teal-light); border-radius: 16px;
+            padding: 2rem; border: 1px solid #b8e6de;
+        }
+        .insurance-highlight h3 {
+            font-size: 1.15rem; font-weight: 700; color: var(--teal);
+            margin-bottom: 0.6rem;
+        }
+        .insurance-highlight p {
+            font-size: 0.92rem; color: var(--text); line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .insurance-highlight .badge-row {
+            display: flex; gap: 0.5rem; flex-wrap: wrap;
+        }
+        .ins-badge {
+            font-size: 0.72rem; font-weight: 600; padding: 0.3rem 0.7rem;
+            border-radius: 50px; background: var(--white); color: var(--teal);
+            border: 1px solid #b8e6de;
+        }
+
+        /* ===== LIVE CV ===== */
+        .live-cv-section { background: var(--off-white); }
+        .live-cv-inner {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: center;
+        }
+        .live-cv-text h2 {
+            font-size: 2rem; font-weight: 800; color: var(--charcoal);
+            letter-spacing: -1px; margin-bottom: 1rem; line-height: 1.2;
+        }
+        .live-cv-text > p {
+            font-size: 1.05rem; color: var(--text-light);
+            margin-bottom: 2rem; line-height: 1.7;
+        }
+        .cv-features { list-style: none; padding: 0; }
+        .cv-features li {
+            padding: 0.65rem 0; font-size: 0.95rem; color: var(--text);
+            display: flex; align-items: center; gap: 0.8rem;
+        }
+        .cv-check {
+            width: 24px; height: 24px; min-width: 24px;
+            background: var(--teal); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 0.7rem; font-weight: 800;
+        }
+        .live-cv-visual { position: relative; }
+
+        /* ===== STANDARDS COMPARISON ===== */
+        .standards { background: var(--charcoal); color: var(--white); }
+        .standards-inner { max-width: 900px; margin: 0 auto; }
+        .standards-header { text-align: center; margin-bottom: 3rem; }
+        .standards-header .section-label { color: var(--yellow); }
+        .standards-header h2 {
+            font-size: 2rem; font-weight: 800; letter-spacing: -1px;
+            margin-bottom: 0.8rem;
+        }
+        .standards-header p { font-size: 1.05rem; color: rgba(255,255,255,0.55); }
+        .standards-table {
+            width: 100%; border-collapse: separate;
+            border-spacing: 0; border-radius: 16px; overflow: hidden;
+        }
+        .standards-table thead th {
+            padding: 1.2rem 1.5rem; font-size: 0.82rem;
+            font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .standards-table thead th:first-child {
+            background: rgba(255,255,255,0.05); text-align: left;
+            color: rgba(255,255,255,0.5);
+        }
+        .standards-table thead th:nth-child(2) {
+            background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5);
+            text-align: center;
+        }
+        .standards-table thead th:nth-child(3) {
+            background: var(--teal); color: var(--white); text-align: center;
+        }
+        .standards-table tbody td {
+            padding: 1rem 1.5rem; font-size: 0.92rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .standards-table tbody td:first-child {
+            color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.02);
+        }
+        .standards-table tbody td:nth-child(2) {
+            text-align: center; color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.04);
+        }
+        .standards-table tbody td:nth-child(3) {
+            text-align: center; color: var(--white); font-weight: 600;
+            background: rgba(13,155,140,0.15);
+        }
+        .standards-table .highlight-cell { color: var(--yellow) !important; font-weight: 700 !important; }
+        .standards-table .dim { color: rgba(255,255,255,0.3) !important; }
+        .standards-note {
+            text-align: center; margin-top: 2rem;
+            font-size: 0.88rem; color: rgba(255,255,255,0.5);
+        }
+
+        /* ===== ROI ===== */
+        .roi { background: var(--teal-light); }
+        .roi-inner { max-width: 800px; margin: 0 auto; }
+        .roi-header { text-align: center; margin-bottom: 3rem; }
+        .roi-header h2 {
+            font-size: 2rem; font-weight: 800; color: var(--charcoal);
+            letter-spacing: -1px; margin-bottom: 0.5rem;
+        }
+        .roi-header p { font-size: 1.05rem; color: var(--text-light); }
+        .roi-comparison {
+            display: grid; grid-template-columns: 1fr auto 1fr;
+            gap: 1.5rem; align-items: start;
+        }
+        .roi-col {
+            background: var(--white); border-radius: 20px; padding: 2rem;
+            border: 2px solid var(--border);
+        }
+        .roi-col.with {
+            border-color: var(--teal); box-shadow: 0 8px 30px rgba(13,155,140,0.1);
+            position: relative;
+        }
+        .roi-col.with::after {
+            content: 'Better Value'; position: absolute; top: -13px; left: 50%;
+            transform: translateX(-50%); background: var(--teal); color: var(--white);
+            padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.72rem; font-weight: 700;
+        }
+        .roi-col h3 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.2rem; text-align: center; }
+        .roi-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.6rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem;
+        }
+        .roi-item:last-child { border-bottom: none; }
+        .roi-item .price { font-weight: 700; color: var(--charcoal); }
+        .roi-item .included { font-weight: 700; color: var(--teal); font-size: 0.8rem; }
+        .roi-total {
+            margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--border);
+            display: flex; justify-content: space-between;
+            font-weight: 800; font-size: 1.1rem; color: var(--charcoal);
+        }
+        .roi-vs {
+            display: flex; align-items: center; font-size: 1.1rem;
+            font-weight: 800; color: var(--text-light);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials { background: var(--white); }
+        .testimonials-header { text-align: center; margin-bottom: 3rem; }
+        .testimonials-header h2 { font-size: 2rem; font-weight: 800; color: var(--charcoal); letter-spacing: -1px; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .testimonial-card {
+            background: var(--off-white); border-radius: 16px; padding: 2rem;
+            border: 1px solid var(--border);
+        }
+        .testimonial-card blockquote {
+            font-size: 0.95rem; color: var(--text); line-height: 1.7;
+            margin-bottom: 1.2rem; font-style: italic;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+        .author-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 700; color: var(--white);
+        }
+        .testimonial-card:nth-child(1) .author-avatar { background: var(--teal); }
+        .testimonial-card:nth-child(2) .author-avatar { background: #D4A017; }
+        .testimonial-card:nth-child(3) .author-avatar { background: #7B68A6; }
+        .author-info strong { display: block; font-size: 0.88rem; color: var(--charcoal); }
+        .author-info span { font-size: 0.78rem; color: var(--text-light); }
+
+        /* ===== PRICING ===== */
+        .pricing { background: var(--off-white); }
+        .pricing-header { text-align: center; margin-bottom: 3rem; }
+        .pricing-header h2 { font-size: 2rem; font-weight: 800; color: var(--charcoal); letter-spacing: -1px; margin-bottom: 0.5rem; }
+        .pricing-header p { font-size: 1.05rem; color: var(--text-light); }
+        .pricing-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 2rem; max-width: 800px; margin: 0 auto;
+        }
+        .price-card {
+            background: var(--white); border-radius: 20px; padding: 2.5rem;
+            border: 2px solid var(--border); text-align: center;
+            transition: all 0.3s; position: relative;
+        }
+        .price-card.featured { border-color: var(--teal); box-shadow: 0 8px 30px rgba(13,155,140,0.12); }
+        .price-card.featured::after {
+            content: 'Most Popular'; position: absolute; top: -14px; left: 50%;
+            transform: translateX(-50%); background: var(--teal); color: var(--white);
+            padding: 0.3rem 1.2rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;
+        }
+        .price-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.3rem; }
+        .price-card .price-desc { font-size: 0.88rem; color: var(--text-light); margin-bottom: 1.5rem; }
+        .price-card .price { font-size: 2.8rem; font-weight: 800; color: var(--charcoal); margin-bottom: 0.3rem; }
+        .price-card .price small { font-size: 1rem; font-weight: 500; color: var(--text-light); }
+        .price-card .price-period { font-size: 0.82rem; color: var(--text-light); margin-bottom: 2rem; }
+        .price-features { list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; }
+        .price-features li {
+            padding: 0.5rem 0; font-size: 0.9rem; color: var(--text);
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .price-features .check-sm {
+            width: 18px; height: 18px; min-width: 18px;
+            background: var(--teal-light); color: var(--teal); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.6rem; font-weight: 800;
+        }
+        .price-card .btn-primary { width: 100%; justify-content: center; }
+        .price-card .btn-secondary { width: 100%; justify-content: center; }
+
+        /* ===== INACTION KILLER ===== */
+        .inaction {
+            background: linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 100%);
+            color: var(--white); text-align: center; padding: 5.5rem 2.5rem;
+            position: relative; overflow: hidden;
+        }
+        .inaction::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 60%);
+            border-radius: 50%;
+        }
+        .inaction h2 {
+            font-size: 2.2rem; font-weight: 800; letter-spacing: -1px;
+            margin-bottom: 1rem; position: relative;
+            max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.2;
+        }
+        .inaction p {
+            font-size: 1.05rem; opacity: 0.85;
+            max-width: 550px; margin: 0 auto 1rem; line-height: 1.7;
+        }
+        .inaction .objections {
+            max-width: 500px; margin: 0 auto 2.5rem;
+            font-size: 0.92rem; opacity: 0.7; line-height: 1.8;
+        }
+        .inaction .objections .strike {
+            text-decoration: line-through; opacity: 0.5;
+        }
+        .inaction .btn-primary {
+            background: var(--yellow); color: var(--charcoal);
+            font-size: 1.05rem; padding: 1.1rem 2.5rem;
+        }
+        .inaction .btn-primary:hover { background: #e6b425; box-shadow: 0 6px 24px rgba(255,200,42,0.3); }
+        .cta-note { font-size: 0.82rem; opacity: 0.6; margin-top: 1rem; }
+
+        /* FOOTER */
+        footer {
+            background: var(--charcoal); color: rgba(255,255,255,0.5);
+            padding: 3rem 2.5rem 2rem;
+        }
+        .footer-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+        }
+        .footer-brand .logo { color: var(--white); font-size: 1.2rem; }
+        .footer-brand p { font-size: 0.85rem; margin-top: 0.8rem; line-height: 1.6; color: rgba(255,255,255,0.4); }
+        .footer-col h4 {
+            font-size: 0.82rem; font-weight: 700; color: rgba(255,255,255,0.7);
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;
+        }
+        .footer-col a {
+            display: block; color: rgba(255,255,255,0.45); text-decoration: none;
+            font-size: 0.88rem; padding: 0.3rem 0; transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--teal); }
+        .footer-bottom {
+            max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex; justify-content: space-between; font-size: 0.78rem;
+        }
+
+        /* MOBILE */
+        .mobile-menu {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--white); z-index: 200;
+            flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+        }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { font-size: 1.2rem; font-weight: 600; color: var(--text); text-decoration: none; }
+        .mobile-close {
+            position: absolute; top: 1.2rem; right: 1.5rem;
+            background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--text);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-inner, .live-cv-inner, .safety-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero { min-height: auto; padding: 3rem 1.5rem; }
+            .trap-cards, .pillars-grid, .wants-grid { grid-template-columns: 1fr; }
+            .mindset-shift { grid-template-columns: 1fr; }
+            .mindset-arrow { transform: rotate(90deg); justify-self: center; }
+            .roi-comparison { grid-template-columns: 1fr; }
+            .roi-vs { justify-content: center; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+            .standards-table { font-size: 0.85rem; }
+            .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 0.5rem; }
+        }
+        @media (max-width: 700px) {
+            nav { padding: 0.8rem 1.2rem; }
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            section { padding: 3.5rem 1.2rem; }
+            .hero-text h1 { font-size: 1.9rem; }
+            .hero-ctas { flex-direction: column; }
+            .hero-ctas .btn-primary, .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .live-cv-preview { transform: none; }
+            .cv-float-card { display: none; }
+            .wants-grid { grid-template-columns: 1fr 1fr; }
+            .safety-grid { grid-template-columns: 1fr; }
+            .standards-table thead th, .standards-table tbody td { padding: 0.8rem; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+    The yoga industry is growing. Your career should be too. <a href="readiness-check.html">Take the free Readiness Check</a>
+</div>
+
+<!-- NAV -->
+<nav>
+    <a href="#" class="logo">Yoga<span>Pros</span></a>
+    <ul class="nav-links">
+        <li><a href="#pillars">Growth Path</a></li>
+        <li><a href="#live-cv">Live CV</a></li>
+        <li><a href="#standards">Standards</a></li>
+        <li><a href="#pricing">Membership</a></li>
+        <li><a href="readiness-check.html" class="btn-nav">Readiness Check</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">&times;</button>
+    <a href="#pillars" class="mobile-link">Growth Path</a>
+    <a href="#live-cv" class="mobile-link">Live CV</a>
+    <a href="#standards" class="mobile-link">Standards</a>
+    <a href="#pricing" class="mobile-link">Membership</a>
+    <a href="readiness-check.html" class="btn-primary mobile-link">Readiness Check</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>You change lives on the mat.<br><span class="highlight">But you can't pay your rent.</span></h1>
+            <p class="hero-sub">Most yoga teachers are trapped — trading hours for money, undercharging because it feels wrong, burning out because there's no other way. There is another way.</p>
+            <p class="hero-stat-line"><strong>10,000+ teachers</strong> across <strong>100+ countries</strong> are already building sustainable careers with Yoga Pros.</p>
+            <div class="hero-ctas">
+                <a href="readiness-check.html" class="btn-primary">Take the Free Readiness Check <span>&rarr;</span></a>
+                <a href="#wants" class="btn-secondary">See how it works</a>
+            </div>
+            <p class="hero-urgency">Takes 2 minutes. No cost. No commitment. Just clarity.</p>
+        </div>
+        <div class="live-cv-preview" style="position: relative;">
+            <div class="cv-header">
+                <div class="cv-avatar">SL</div>
+                <div>
+                    <div class="cv-name">Sarah Langford</div>
+                    <div class="cv-title">Vinyasa &amp; Yin Teacher &middot; London</div>
+                </div>
+            </div>
+            <div class="cv-body">
+                <div class="cv-badges">
+                    <span class="cv-badge verified">&#10003; Verified Professional</span>
+                    <span class="cv-badge safety">&#128737; Insured</span>
+                    <span class="cv-badge gold">Senior Teacher</span>
+                </div>
+                <div class="cv-section-label">Specialisms</div>
+                <div class="cv-specialisms">
+                    <span class="cv-spec">Vinyasa Flow</span>
+                    <span class="cv-spec">Yin Yoga</span>
+                    <span class="cv-spec">Prenatal</span>
+                    <span class="cv-spec">Corporate</span>
+                </div>
+                <div class="cv-stats">
+                    <div class="cv-stat"><strong>8+</strong><span>Years</span></div>
+                    <div class="cv-stat"><strong>4,200</strong><span>Hours</span></div>
+                    <div class="cv-stat"><strong>12</strong><span>Qualifications</span></div>
+                </div>
+                <div class="cv-open"><span class="dot"></span> Open to: Cover Classes &middot; Retreats &middot; Corporate</div>
+            </div>
+            <div class="cv-float-card notification">&#128276; Studio Southbank viewed your profile</div>
+            <div class="cv-float-card opportunity">
+                <div class="opp-badge">New Opportunity</div>
+                <div class="opp-title">Cover class: Vinyasa</div>
+                <div class="opp-detail">Tomorrow 6pm &middot; Clapham &middot; &pound;55</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== THE TRAP ===== -->
+<section class="trap">
+    <div class="container">
+        <div class="trap-inner">
+            <span class="section-label">The Reality</span>
+            <h2>The yoga industry has a dirty secret</h2>
+            <p>Most yoga teachers are brilliant at what they do — and broke because of how they do it. The problem isn't your teaching. It's the model you're trapped in.</p>
+            <div class="trap-cards">
+                <div class="trap-card">
+                    <div class="trap-icon">&#128564;</div>
+                    <h3>The burnout loop</h3>
+                    <p>Teaching 20+ classes a week just to cover the bills. Your body hurts. Your practice suffers. The thing you love is breaking you.</p>
+                </div>
+                <div class="trap-card">
+                    <div class="trap-icon">&#128566;</div>
+                    <h3>The pricing guilt</h3>
+                    <p>"I shouldn't charge more — yoga should be accessible." So you undercharge, overdeliver, and wonder why you can't make it work.</p>
+                </div>
+                <div class="trap-card">
+                    <div class="trap-icon">&#128683;</div>
+                    <h3>The invisibility problem</h3>
+                    <p>No professional profile. No credibility markers. No way for opportunities to find you. You're invisible beyond your current studios.</p>
+                </div>
+            </div>
+            <div class="trap-quote">
+                <blockquote>"I was teaching 23 classes a week and earning less than minimum wage when I factored in prep, travel, and admin. I loved teaching. I hated my life."</blockquote>
+                <cite>— Yoga Pros member, before joining</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MARKET TRUTH ===== -->
+<div class="market-truth">
+    <div class="container">
+        <h3>The yoga industry is still growing. You just can't see it.</h3>
+        <p>Forbes and industry data confirm yoga is on a growth trajectory. But most teachers believe the opposite — because they're invisible and assume their experience is the market reality. The market isn't shrinking. You're just not standing out in it.</p>
+        <p class="source">Sources: Forbes, Yoga Pros industry data</p>
+    </div>
+</div>
+
+<!-- ===== WHAT TEACHERS WANT ===== -->
+<section class="wants" id="wants">
+    <div class="container">
+        <div class="wants-header">
+            <span class="section-label">What You Actually Need</span>
+            <h2>Teachers tell us they want four things</h2>
+            <p>We built everything around delivering these.</p>
+        </div>
+        <div class="wants-grid">
+            <div class="want-card">
+                <div class="want-icon">&#128065;</div>
+                <h3>Visibility</h3>
+                <p>Be found by studios, employers, and students actively looking for teachers like you.</p>
+                <span class="want-delivers">Live CV + Directory</span>
+            </div>
+            <div class="want-card">
+                <div class="want-icon">&#127942;</div>
+                <h3>Credibility</h3>
+                <p>Professional badges and verified credentials that prove your expertise at a glance.</p>
+                <span class="want-delivers">Experience Badges</span>
+            </div>
+            <div class="want-card">
+                <div class="want-icon">&#11088;</div>
+                <h3>Recognition</h3>
+                <p>A structured path from newly qualified to Senior Teacher — milestones that mean something.</p>
+                <span class="want-delivers">The Growth Path</span>
+            </div>
+            <div class="want-card">
+                <div class="want-icon">&#128737;</div>
+                <h3>Safety</h3>
+                <p>Comprehensive protection for you, your business, your students, and your employers.</p>
+                <span class="want-delivers">Safety Division + Insurance</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MINDSET SHIFT ===== -->
+<section class="mindset" id="mindset">
+    <div class="container">
+        <div class="mindset-inner">
+            <div class="mindset-header">
+                <span class="section-label">The Real Blocker</span>
+                <h2>The belief that yoga teachers shouldn't charge is the biggest threat to yoga</h2>
+                <p>Most teachers are right-brain creatives with an artist mindset — brilliant, but trapped by beliefs about money. They want and need to earn, but feel guilty about it. This is the unlock that makes everything else possible.</p>
+            </div>
+            <div class="mindset-shift">
+                <div class="mindset-col scarcity">
+                    <h3>Scarcity Mindset</h3>
+                    <ul>
+                        <li>"I can't charge more — people won't pay"</li>
+                        <li>"Yoga and money don't mix"</li>
+                        <li>"I just need more classes"</li>
+                        <li>"Marketing feels inauthentic"</li>
+                        <li>"I'm not a business person"</li>
+                        <li>"I'll sort this out next month"</li>
+                    </ul>
+                </div>
+                <div class="mindset-arrow">&rarr;</div>
+                <div class="mindset-col abundance">
+                    <h3>Abundance Mindset</h3>
+                    <ul>
+                        <li>"My expertise has real value"</li>
+                        <li>"Sustainable income sustains my teaching"</li>
+                        <li>"I need smarter models, not more hours"</li>
+                        <li>"Visibility is service — people need to find me"</li>
+                        <li>"I'm building a professional career"</li>
+                        <li>"I'm starting today, not tomorrow"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mindset-bottom">
+                <p>Yoga Pros doesn't just give you tools. We help you operate above the line — as a professional.</p>
+                <a href="readiness-check.html" class="btn-primary">Find Out Where You Stand <span>&rarr;</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== THREE PILLARS ===== -->
+<section class="pillars" id="pillars">
+    <div class="container">
+        <div class="pillars-header">
+            <span class="section-label">The Growth Path</span>
+            <h2>Three pillars. One sustainable career.</h2>
+            <p>Your career isn't just about teaching better. It's about building better — across teaching, business, and mindset.</p>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-card teaching">
+                <div class="pillar-icon">&#129495;</div>
+                <h3>Teaching</h3>
+                <p class="pillar-desc">Your craft. Linear progression — you can't shortcut experience. Earn your stripes on the mat.</p>
+                <ul class="pillar-path">
+                    <li class="active"><span class="path-dot"></span> Newly Qualified Teacher</li>
+                    <li class="active"><span class="path-dot"></span> Yoga Teacher</li>
+                    <li><span class="path-dot"></span> Experienced Teacher <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">(4yrs / 2,000hrs)</small></li>
+                    <li><span class="path-dot"></span> Senior Teacher <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">(8yrs / 4,000hrs)</small></li>
+                </ul>
+                <p class="pillar-note">Linear — cannot be shortcut. Hours counted from qualification.</p>
+            </div>
+            <div class="pillar-card business">
+                <div class="pillar-icon">&#128200;</div>
+                <h3>Business</h3>
+                <p class="pillar-desc">Your livelihood. Non-linear — if you have the skills, you can leapfrog. Most start trading time for money:</p>
+                <ul class="pillar-path">
+                    <li class="active"><span class="path-dot"></span> Self-Employed <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">(time for money)</small></li>
+                    <li><span class="path-dot"></span> Personal Brand <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">(you're no longer the product)</small></li>
+                    <li><span class="path-dot"></span> Business Owner <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">(multiple streams, team)</small></li>
+                </ul>
+                <p class="pillar-note">Non-linear — a new teacher with business skills can jump straight to Brand or Business.</p>
+            </div>
+            <div class="pillar-card wellbeing">
+                <div class="pillar-icon">&#128161;</div>
+                <h3>Wellbeing &amp; Mindset</h3>
+                <p class="pillar-desc">The unlock. Without this shift, the other pillars collapse. Most teachers are stuck here:</p>
+                <ul class="pillar-path">
+                    <li class="active"><span class="path-dot"></span> Scarcity <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">("I shouldn't charge")</small></li>
+                    <li><span class="path-dot"></span> Awareness <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">("something must change")</small></li>
+                    <li><span class="path-dot"></span> Abundance <small style="color:rgba(255,255,255,0.35);font-size:0.72rem">(operating above the line)</small></li>
+                </ul>
+                <p class="pillar-note">The foundation everything else is built on.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SAFETY DIVISION ===== -->
+<section class="safety" id="safety">
+    <div class="container">
+        <div class="safety-inner">
+            <div class="safety-text">
+                <span class="section-label">Safety Division</span>
+                <h2>Comprehensive protection for every part of your career</h2>
+                <p>Our Safety Division guides you to operate safely and effectively — not just for yourself, but for everyone you work with. Because a professional career is a protected career.</p>
+                <div class="safety-grid">
+                    <div class="safety-card">
+                        <div class="s-icon">&#129489;</div>
+                        <h4>For You</h4>
+                        <p>Wellbeing, boundaries, burnout prevention. Protect yourself first.</p>
+                    </div>
+                    <div class="safety-card">
+                        <div class="s-icon">&#128188;</div>
+                        <h4>For Your Business</h4>
+                        <p>Insurance, compliance, professional standards. Operate with confidence.</p>
+                    </div>
+                    <div class="safety-card">
+                        <div class="s-icon">&#129495;</div>
+                        <h4>For Your Students</h4>
+                        <p>Safe teaching practices, duty of care, informed consent.</p>
+                    </div>
+                    <div class="safety-card">
+                        <div class="s-icon">&#129309;</div>
+                        <h4>For Employers &amp; Partners</h4>
+                        <p>Verified standards they can trust. You become the safe hire.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="insurance-highlight">
+                    <h3>&#128737; UK &amp; Ireland Insurance Partnership</h3>
+                    <p>We partner with specialist insurers to offer the most comprehensive yoga teacher insurance in the industry. Included with Professional membership — no extra cost, no separate policy to manage.</p>
+                    <div class="badge-row">
+                        <span class="ins-badge">Public Liability</span>
+                        <span class="ins-badge">Professional Indemnity</span>
+                        <span class="ins-badge">Product Liability</span>
+                        <span class="ins-badge">UK &amp; Ireland Cover</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LIVE CV ===== -->
+<section class="live-cv-section" id="live-cv">
+    <div class="container">
+        <div class="live-cv-inner">
+            <div class="live-cv-text">
+                <span class="section-label">Your Live CV</span>
+                <h2>Stop hustling for work. Let opportunities find you.</h2>
+                <p>Your Live CV is your interactive professional profile — a dynamic showcase of everything you've done, what you specialise in, and what you're open to. Employers and partners browse the ecosystem looking for teachers exactly like you.</p>
+                <ul class="cv-features">
+                    <li><span class="cv-check">&#10003;</span> Verified qualifications, CPD hours, and experience badges</li>
+                    <li><span class="cv-check">&#10003;</span> Display specialisms and teaching style</li>
+                    <li><span class="cv-check">&#10003;</span> Signal availability for cover, retreats, corporate, partnerships</li>
+                    <li><span class="cv-check">&#10003;</span> Get discovered by studios, gyms, and wellness brands</li>
+                    <li><span class="cv-check">&#10003;</span> Build your professional network within the P2P ecosystem</li>
+                    <li><span class="cv-check">&#10003;</span> Receive opportunities directly to your profile</li>
+                </ul>
+            </div>
+            <div class="live-cv-visual" style="position:relative;">
+                <div style="background:var(--white);border-radius:20px;padding:2rem;box-shadow:0 12px 40px rgba(0,0,0,0.08);border:1px solid var(--border);">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+                        <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;">MR</div>
+                        <div>
+                            <div style="font-weight:700;color:var(--charcoal);">Marco Rossi</div>
+                            <div style="font-size:0.78rem;color:var(--text-light);">Teacher Trainer &middot; Barcelona</div>
+                        </div>
+                    </div>
+                    <div class="cv-badges" style="margin-bottom:1rem;">
+                        <span class="cv-badge verified">&#10003; Accredited Trainer</span>
+                        <span class="cv-badge gold">8+ Years</span>
+                        <span class="cv-badge safety">&#128737; Insured</span>
+                    </div>
+                    <div style="font-size:0.78rem;font-weight:600;color:var(--text-light);margin-bottom:0.5rem;">OPEN TO</div>
+                    <div class="cv-specialisms" style="margin-bottom:1rem;">
+                        <span class="cv-spec">Teacher Training</span>
+                        <span class="cv-spec">Retreats</span>
+                        <span class="cv-spec">Mentoring</span>
+                    </div>
+                    <div class="cv-open"><span class="dot"></span> Accepting training applications for September 2026</div>
+                </div>
+                <div class="cv-float-card notification" style="top:-15px;right:-15px;">&#128276; 3 new profile views this week</div>
+                <div class="cv-float-card opportunity" style="bottom:20px;left:-25px;">
+                    <div class="opp-badge">Partnership</div>
+                    <div class="opp-title">Retreat collaboration</div>
+                    <div class="opp-detail">Bali &middot; Sep 2026 &middot; Revenue share</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STANDARDS COMPARISON ===== -->
+<section class="standards" id="standards">
+    <div class="container">
+        <div class="standards-inner">
+            <div class="standards-header">
+                <span class="section-label">Accreditation</span>
+                <h2>The highest training standards in the industry</h2>
+                <p>Not all teacher training is created equal. Here's how our Foundation accreditation compares.</p>
+            </div>
+            <table class="standards-table">
+                <thead>
+                    <tr>
+                        <th>Requirement</th>
+                        <th>Yoga Alliance USA</th>
+                        <th>Yoga Pros</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lead teacher experience</td>
+                        <td>4 years / 2,000 hrs</td>
+                        <td class="highlight-cell">8 years / 4,000 hrs</td>
+                    </tr>
+                    <tr>
+                        <td>Lead teacher must deliver</td>
+                        <td>35% of course</td>
+                        <td class="highlight-cell">70%+ of contact hours</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum contact hours</td>
+                        <td>Varies</td>
+                        <td class="highlight-cell">180 hours minimum</td>
+                    </tr>
+                    <tr>
+                        <td>Pre-recorded content</td>
+                        <td class="dim">Up to 85% allowed</td>
+                        <td class="highlight-cell">Never accepted</td>
+                    </tr>
+                    <tr>
+                        <td>Lead teacher status</td>
+                        <td>E-RYT (lower bar)</td>
+                        <td class="highlight-cell">Senior Yoga Teacher only</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="standards-note">Your training should be led by the best, in real time, face to face. We don't compromise on this.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ROI ===== -->
+<section class="roi" id="roi">
+    <div class="container">
+        <div class="roi-inner">
+            <div class="roi-header">
+                <span class="section-label">The Maths</span>
+                <h2>Membership pays for itself before you use it</h2>
+                <p>Professional insurance alone costs more than your entire Yoga Pros membership.</p>
+            </div>
+            <div class="roi-comparison">
+                <div class="roi-col without">
+                    <h3>Without Yoga Pros</h3>
+                    <div class="roi-item"><span>Professional insurance</span><span class="price">&pound;15+/mo</span></div>
+                    <div class="roi-item"><span>Directory listing</span><span class="price">&pound;5-10/mo</span></div>
+                    <div class="roi-item"><span>CPD tracking</span><span class="price">DIY</span></div>
+                    <div class="roi-item"><span>Professional profile</span><span class="price">None</span></div>
+                    <div class="roi-item"><span>Cover class access</span><span class="price">None</span></div>
+                    <div class="roi-item"><span>Community &amp; support</span><span class="price">None</span></div>
+                    <div class="roi-total"><span>Total</span><span class="price">&pound;20+/mo</span></div>
+                </div>
+                <div class="roi-vs">vs</div>
+                <div class="roi-col with">
+                    <h3>With Yoga Pros</h3>
+                    <div class="roi-item"><span>Professional insurance</span><span class="included">&#10003; Included</span></div>
+                    <div class="roi-item"><span>Featured directory + Live CV</span><span class="included">&#10003; Included</span></div>
+                    <div class="roi-item"><span>CPD tracking &amp; accreditation</span><span class="included">&#10003; Included</span></div>
+                    <div class="roi-item"><span>Safety Division guidance</span><span class="included">&#10003; Included</span></div>
+                    <div class="roi-item"><span>Cover class opportunities</span><span class="included">&#10003; Included</span></div>
+                    <div class="roi-item"><span>P2P community &amp; network</span><span class="included">&#10003; Included</span></div>
+                    <div class="roi-total"><span>Total</span><span class="price" style="color:var(--teal);">&pound;12/mo</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+    <div class="container">
+        <div class="testimonials-header">
+            <span class="section-label">From Our Members</span>
+            <h2>Teachers who stopped surviving and started thriving</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <blockquote>"I was stuck in the scarcity trap — 22 classes a week, guilty about raising prices. The Growth Path helped me see that sustainable income <em>is</em> what makes yoga accessible. I now teach 12 classes and earn more than I ever did."</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SL</div>
+                    <div class="author-info"><strong>Sarah L.</strong><span>Vinyasa Teacher, London</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>"My Live CV brought me a corporate wellness contract I never would have found. One contract — more than I earned teaching group classes all month. That changed everything about how I saw my career."</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MR</div>
+                    <div class="author-info"><strong>Marco R.</strong><span>Teacher Trainer, Barcelona</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>"I kept saying 'I'll sort my career out next year.' The Readiness Check took 2 minutes and showed me I was further behind than I thought. That was the push I needed. I joined that day."</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AK</div>
+                    <div class="author-info"><strong>Amara K.</strong><span>Yin &amp; Restorative, Toronto</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <div class="pricing-header">
+            <span class="section-label">Membership</span>
+            <h2>Start free. Grow when you're ready.</h2>
+            <p>No pressure. No lock-in. Begin building your professional career today.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Associate</h3>
+                <p class="price-desc">Start your professional journey</p>
+                <div class="price">Free</div>
+                <p class="price-period">No credit card needed</p>
+                <ul class="price-features">
+                    <li><span class="check-sm">&#10003;</span> Community access</li>
+                    <li><span class="check-sm">&#10003;</span> Basic directory listing</li>
+                    <li><span class="check-sm">&#10003;</span> Teaching resources</li>
+                    <li><span class="check-sm">&#10003;</span> Foundation training access</li>
+                    <li><span class="check-sm">&#10003;</span> Career Readiness Check</li>
+                </ul>
+                <a href="readiness-check.html" class="btn-secondary">Start Free</a>
+            </div>
+            <div class="price-card featured">
+                <h3>Professional</h3>
+                <p class="price-desc">Everything you need to thrive</p>
+                <div class="price">&pound;12 <small>/month</small></div>
+                <p class="price-period">Billed annually. Cancel anytime.</p>
+                <ul class="price-features">
+                    <li><span class="check-sm">&#10003;</span> Everything in Associate, plus:</li>
+                    <li><span class="check-sm">&#10003;</span> Professional insurance included</li>
+                    <li><span class="check-sm">&#10003;</span> Live CV &amp; professional profile</li>
+                    <li><span class="check-sm">&#10003;</span> Cover class opportunities</li>
+                    <li><span class="check-sm">&#10003;</span> Full Growth Path &amp; badges</li>
+                    <li><span class="check-sm">&#10003;</span> Safety Division guidance</li>
+                    <li><span class="check-sm">&#10003;</span> P2P ecosystem access</li>
+                    <li><span class="check-sm">&#10003;</span> CPD tracking &amp; accreditation</li>
+                </ul>
+                <a href="#join" class="btn-primary">Join Professional</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INACTION KILLER / FINAL CTA ===== -->
+<section class="inaction" id="join">
+    <h2>The biggest threat to your yoga career isn't the market. It's waiting.</h2>
+    <p>Every excuse you've told yourself is the scarcity mindset talking:</p>
+    <div class="objections">
+        <span class="strike">"I'll start next month"</span> &mdash; You said that last month.<br>
+        <span class="strike">"I don't have time"</span> &mdash; The Readiness Check takes 2 minutes.<br>
+        <span class="strike">"I can't afford it"</span> &mdash; Associate membership is free.<br>
+        <span class="strike">"It probably won't work for me"</span> &mdash; It's working for 10,000+ teachers.
+    </div>
+    <a href="readiness-check.html" class="btn-primary">Take the Readiness Check — It's Free <span>&rarr;</span></a>
+    <p class="cta-note">2 minutes. Personalised results. No commitment. No excuses.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="#" class="logo">Yoga<span>Pros</span></a>
+            <p>A standards-led professional body for yoga teachers. Not-for-profit Scottish company (SC502923). Based in Edinburgh.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Your Path</h4>
+            <a href="#pillars">The Growth Path</a>
+            <a href="#mindset">Mindset Shift</a>
+            <a href="#pricing">Membership</a>
+            <a href="#standards">Accreditation</a>
+        </div>
+        <div class="footer-col">
+            <h4>Your Career</h4>
+            <a href="#live-cv">Live CV</a>
+            <a href="readiness-check.html">Readiness Check</a>
+            <a href="#">Find a Teacher</a>
+            <a href="#">Cover Classes</a>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#safety">Safety Division</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; 2026 Yoga Pros (formerly Yoga Alliance Professionals). All rights reserved.</span>
+        <span>Edinburgh, Scotland</span>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('active');
+    });
+    document.getElementById('mobile-close').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.remove('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('active');
+        });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.trap-card, .pillar-card, .testimonial-card, .price-card, .want-card, .mindset-col, .safety-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
