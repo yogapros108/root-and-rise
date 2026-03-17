@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accreditation Standards — YogaPros</title>
+    <meta name="description" content="How YogaPros sets the highest training accreditation standards in the yoga industry. Six quality mechanisms that protect teachers, students, and the profession.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #261f46; --orange: #f09221; --sage: #7eb9a6;
+            --lavender: #aaa6dc; --peach: #fdf0e0; --lilac: #f6f5ff;
+            --mint: #e3fff8; --text: #2D3436; --text-light: #636E72;
+            --white: #FFFFFF; --off-white: #FAFCFB; --border: #E8EFED;
+            --green: #27AE60; --green-light: #E8F8F0;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', -apple-system, sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: var(--navy); }
+
+        /* NAV */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--navy); text-decoration: none; letter-spacing: 5px; text-transform: uppercase; }
+        .nav-back { color: var(--text-light); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+        .nav-back:hover { color: var(--orange); }
+
+        /* HERO */
+        .hero { background: var(--navy); color: var(--white); padding: 5rem 2.5rem 4rem; text-align: center; }
+        .hero .section-label { color: var(--orange); font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; display: block; }
+        .hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--white); margin-bottom: 1.2rem; line-height: 1.15; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto; line-height: 1.7; font-weight: 300; }
+
+        /* CONTAINER */
+        .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 5rem 0; }
+        .section-label { color: var(--orange); font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+
+        /* INTRO TEXT */
+        .intro-text { font-size: 1.1rem; color: var(--text-light); line-height: 1.8; font-weight: 300; max-width: 700px; }
+        .intro-text strong { color: var(--navy); font-weight: 600; }
+
+        /* PHILOSOPHY */
+        .philosophy { background: var(--lilac); }
+        .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
+        .phil-card { background: var(--white); border-radius: 16px; padding: 2rem; }
+        .phil-card .phil-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; }
+        .phil-card .phil-label.old { color: var(--text-light); }
+        .phil-card .phil-label.yp { color: var(--orange); }
+        .phil-card h3 { font-size: 1.15rem; margin-bottom: 0.8rem; }
+        .phil-card p { font-size: 0.92rem; color: var(--text-light); line-height: 1.7; font-weight: 300; }
+        .phil-card ul { list-style: none; padding: 0; margin-top: 1rem; }
+        .phil-card ul li { font-size: 0.88rem; color: var(--text-light); padding: 0.4rem 0; padding-left: 1.5rem; position: relative; }
+        .phil-card ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 8px; height: 8px; border-radius: 50%; }
+        .phil-card.old-model ul li::before { background: var(--border); }
+        .phil-card.yp-model ul li::before { background: var(--orange); }
+
+        /* SIX MECHANISMS */
+        .mechanisms { background: var(--white); }
+        .mechanism { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; margin-bottom: 3rem; align-items: start; }
+        .mech-number { width: 64px; height: 64px; border-radius: 50%; background: var(--peach); display: flex; align-items: center; justify-content: center; font-family: 'Instrument Serif', Georgia, serif; font-size: 1.5rem; color: var(--orange); margin-top: 0.2rem; }
+        .mech-content h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .mech-content p { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; font-weight: 300; margin-bottom: 0.8rem; }
+        .mech-detail { background: var(--off-white); border-radius: 12px; padding: 1.2rem 1.5rem; margin-top: 0.8rem; }
+        .mech-detail p { font-size: 0.88rem; margin-bottom: 0.3rem; }
+        .mech-detail strong { color: var(--navy); }
+        .mech-highlight { display: inline-block; background: var(--mint); color: #0a7f73; font-size: 0.78rem; font-weight: 700; padding: 0.25rem 0.8rem; border-radius: 50px; margin-top: 0.5rem; }
+        .win-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+        .win-item { text-align: center; padding: 1rem; background: var(--off-white); border-radius: 12px; }
+        .win-item .win-who { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--orange); margin-bottom: 0.3rem; }
+        .win-item p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+
+        /* COMPARISON TABLE */
+        .comparison { background: var(--navy); color: var(--white); padding: 5rem 0; }
+        .comparison h2 { color: var(--white); text-align: center; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.5rem; }
+        .comparison > .container > p { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.95rem; font-weight: 300; margin-bottom: 3rem; }
+        .comp-table { width: 100%; border-collapse: collapse; }
+        .comp-table thead th { padding: 1rem; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+        .comp-table thead th:first-child { color: rgba(255,255,255,0.5); }
+        .comp-table thead th:nth-child(2) { color: rgba(255,255,255,0.3); }
+        .comp-table thead th:nth-child(3) { color: var(--orange); }
+        .comp-table tbody td { padding: 1rem; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.06); font-weight: 300; }
+        .comp-table tbody td:first-child { color: rgba(255,255,255,0.7); font-weight: 500; }
+        .comp-table .dim { color: rgba(255,255,255,0.25); }
+        .comp-table .highlight-cell { color: var(--orange); font-weight: 700; }
+        .comp-note { text-align: center; margin-top: 2rem; font-size: 0.85rem; color: rgba(255,255,255,0.35); font-weight: 300; font-style: italic; }
+
+        /* GRADUATE REVIEWS */
+        .reviews-section { background: var(--off-white); }
+        .review-questions { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .review-q { background: var(--white); border-radius: 16px; padding: 2rem; text-align: center; border: 1px solid var(--border); }
+        .review-q .stars { font-size: 1.5rem; margin-bottom: 0.8rem; }
+        .review-q h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .review-q p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; font-weight: 300; }
+        .review-note { margin-top: 2rem; padding: 1.5rem; background: var(--mint); border-radius: 12px; }
+        .review-note p { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
+        .review-note strong { color: var(--navy); }
+
+        /* DEVELOPMENT TRAINING */
+        .dev-training { background: var(--lilac); }
+        .dev-intro { font-size: 1.05rem; color: var(--text-light); line-height: 1.8; font-weight: 300; max-width: 700px; margin-bottom: 2.5rem; }
+        .dev-intro strong { color: var(--navy); font-weight: 600; }
+        .tier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+        .tier-card { background: var(--white); border-radius: 20px; padding: 2.5rem; border: 1px solid var(--border); }
+        .tier-card.specialist { border-color: var(--orange); border-width: 2px; }
+        .tier-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; }
+        .tier-label.regular { color: var(--sage); }
+        .tier-label.specialist { color: var(--orange); }
+        .tier-card h3 { font-size: 1.15rem; margin-bottom: 0.8rem; }
+        .tier-card > p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; font-weight: 300; margin-bottom: 1rem; }
+        .tier-reqs { list-style: none; padding: 0; }
+        .tier-reqs li { font-size: 0.85rem; color: var(--text); padding: 0.5rem 0; padding-left: 1.8rem; position: relative; line-height: 1.5; }
+        .tier-reqs li::before { content: '\2713'; position: absolute; left: 0; color: var(--sage); font-weight: 700; }
+        .tier-card.specialist .tier-reqs li::before { color: var(--orange); }
+        .pre-recorded-box { background: var(--white); border-radius: 16px; padding: 2rem; border: 1px solid var(--border); margin-bottom: 3rem; }
+        .pre-recorded-box h3 { font-size: 1.1rem; margin-bottom: 1rem; }
+        .pre-recorded-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .pre-rec-card { padding: 1.5rem; border-radius: 12px; }
+        .pre-rec-card.foundation { background: #fde8e8; }
+        .pre-rec-card.development { background: var(--green-light); }
+        .pre-rec-card .prc-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .pre-rec-card.foundation .prc-label { color: #c0392b; }
+        .pre-rec-card.development .prc-label { color: var(--green); }
+        .pre-rec-card p { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
+        .pre-rec-card p strong { color: var(--navy); }
+        .specialty-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+        .specialty-tag { background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 0.6rem 1.2rem; font-size: 0.82rem; font-weight: 500; color: var(--navy); text-align: center; }
+
+        /* WHY IT MATTERS */
+        .why-matters { background: var(--white); }
+        .matters-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .matters-card { padding: 2rem; border-radius: 16px; border: 1px solid var(--border); }
+        .matters-card .mc-for { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--orange); margin-bottom: 0.8rem; }
+        .matters-card h3 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+        .matters-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; font-weight: 300; }
+
+        /* FOR TRAINING SCHOOLS */
+        .for-schools { background: var(--peach); }
+        .schools-intro { font-size: 1.05rem; color: var(--text-light); line-height: 1.8; font-weight: 300; max-width: 700px; margin-bottom: 2.5rem; }
+        .schools-intro strong { color: var(--navy); font-weight: 600; }
+        .benefit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+        .benefit-card { background: var(--white); border-radius: 16px; padding: 2rem; }
+        .benefit-card .benefit-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+        .benefit-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .benefit-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; font-weight: 300; }
+        .ecosystem-box { background: var(--white); border-radius: 20px; padding: 2.5rem; border: 2px solid var(--orange); }
+        .ecosystem-box h3 { font-size: 1.3rem; margin-bottom: 0.8rem; text-align: center; }
+        .ecosystem-box > p { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; font-weight: 300; text-align: center; margin-bottom: 2rem; }
+        .eco-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .eco-step { text-align: center; padding: 1.5rem 1rem; background: var(--off-white); border-radius: 14px; position: relative; }
+        .eco-step .step-num { display: inline-block; width: 32px; height: 32px; border-radius: 50%; background: var(--orange); color: var(--white); font-weight: 700; font-size: 0.85rem; line-height: 32px; margin-bottom: 0.8rem; }
+        .eco-step h4 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 1rem; color: var(--navy); margin-bottom: 0.4rem; }
+        .eco-step p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+        .eco-arrow { display: none; }
+
+        @media (min-width: 769px) {
+            .eco-step:not(:last-child)::after { content: '\2192'; position: absolute; right: -1.1rem; top: 50%; transform: translateY(-50%); font-size: 1.2rem; color: var(--orange); font-weight: 700; z-index: 1; }
+        }
+
+        /* CAREER PROGRESSION */
+        .career-progression { background: var(--white); }
+        .progression-intro { font-size: 1.05rem; color: var(--text-light); line-height: 1.8; font-weight: 300; max-width: 700px; margin-bottom: 2.5rem; }
+        .progression-intro strong { color: var(--navy); font-weight: 600; }
+        .progression-flow { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: 2rem; flex-wrap: wrap; }
+        .prog-stage { text-align: center; padding: 1.5rem 1.2rem; background: var(--off-white); border-radius: 14px; flex: 1; min-width: 150px; max-width: 220px; }
+        .prog-stage .prog-title { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 1.05rem; color: var(--navy); margin-bottom: 0.3rem; }
+        .prog-stage .prog-desc { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; font-weight: 300; }
+        .prog-stage.active { background: var(--peach); border: 2px solid var(--orange); }
+        .prog-arrow { font-size: 1.5rem; color: var(--orange); font-weight: 700; padding: 0 0.5rem; }
+        .prog-note { background: var(--mint); border-radius: 12px; padding: 1.5rem 2rem; margin-top: 1rem; }
+        .prog-note p { font-size: 0.92rem; color: var(--text); line-height: 1.7; }
+        .prog-note strong { color: var(--navy); }
+
+        /* CTA */
+        .page-cta { background: var(--navy); color: var(--white); padding: 5rem 2rem; }
+        .page-cta .container { max-width: 900px; margin: 0 auto; }
+        .page-cta h2 { color: var(--white); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; text-align: center; }
+        .page-cta > .container > p.cta-sub { font-size: 1rem; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 3rem; font-weight: 300; line-height: 1.7; text-align: center; }
+        .cta-paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .cta-path { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem 1.5rem; text-align: center; transition: all 0.3s; }
+        .cta-path:hover { background: rgba(255,255,255,0.1); border-color: var(--orange); }
+        .cta-path .path-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; }
+        .cta-path .path-label.foundation { color: var(--orange); }
+        .cta-path .path-label.development { color: var(--sage); }
+        .cta-path .path-label.teacher { color: var(--lavender); }
+        .cta-path h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 0.6rem; }
+        .cta-path p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; font-weight: 300; margin-bottom: 1.2rem; }
+        .cta-path .cta-audiences { list-style: none; padding: 0; margin-bottom: 1.5rem; text-align: left; }
+        .cta-path .cta-audiences li { font-size: 0.78rem; color: rgba(255,255,255,0.45); padding: 0.3rem 0 0.3rem 1.2rem; position: relative; line-height: 1.4; }
+        .cta-path .cta-audiences li::before { content: '\2713'; position: absolute; left: 0; color: var(--sage); font-size: 0.7rem; font-weight: 700; }
+        .cta-path .btn-path { display: inline-block; background: var(--orange); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 0.82rem; transition: all 0.3s; }
+        .cta-path .btn-path:hover { background: #d9831e; transform: translateY(-1px); }
+        .page-cta .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--orange); color: var(--white); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; }
+        .page-cta .btn:hover { background: #d9831e; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+
+        /* FOOTER */
+        footer { background: var(--navy); color: rgba(255,255,255,0.4); padding: 2rem 2.5rem; text-align: center; font-size: 0.82rem; }
+        footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        footer a:hover { color: var(--orange); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 0.8rem 1.2rem; }
+            .hero { padding: 3rem 1.5rem; }
+            .container { padding: 0 1.5rem; }
+            .section { padding: 3rem 0; }
+            .philosophy-grid { grid-template-columns: 1fr; }
+            .mechanism { grid-template-columns: 56px 1fr; gap: 1.2rem; }
+            .mech-number { width: 48px; height: 48px; font-size: 1.2rem; }
+            .review-questions { grid-template-columns: 1fr; }
+            .matters-grid { grid-template-columns: 1fr; }
+            .win-grid { grid-template-columns: 1fr; }
+            .benefit-grid { grid-template-columns: 1fr; }
+            .eco-flow { grid-template-columns: 1fr; }
+            .tier-grid { grid-template-columns: 1fr; }
+            .pre-recorded-grid { grid-template-columns: 1fr; }
+            .specialty-grid { grid-template-columns: repeat(2, 1fr); }
+            .comp-table thead th, .comp-table tbody td { padding: 0.7rem; font-size: 0.8rem; }
+            .cta-paths { grid-template-columns: 1fr; }
+            .progression-flow { flex-direction: column; gap: 0; }
+            .prog-arrow { transform: rotate(90deg); padding: 0.3rem 0; }
+            .prog-stage { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">YogaPros</a>
+    <a href="index.html" class="nav-back">&larr; Back to home</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <span class="section-label">Accreditation</span>
+    <h1>Standards that actually mean something</h1>
+    <p>Most accreditation bodies inspect. We designed a system where quality is built in — through high standards, transparency, and feedback loops that reward excellence.</p>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="section">
+    <div class="container">
+        <p class="intro-text">
+            Anyone can call themselves an accreditation body. The question is: <strong>do the standards actually protect teachers, students, and the profession?</strong>
+        </p>
+        <br>
+        <p class="intro-text">
+            We built YogaPros because we saw standards dropping — courses getting shorter, contact hours disappearing, lead trainers with less and less experience. We believe yoga teachers deserve the same professional infrastructure as any other profession. That starts with accreditation you can trust.
+        </p>
+    </div>
+</section>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section class="section philosophy">
+    <div class="container">
+        <span class="section-label">Our approach</span>
+        <h2>Two models of quality assurance</h2>
+        <div class="philosophy-grid">
+            <div class="phil-card old-model">
+                <div class="phil-label old">Traditional model</div>
+                <h3>Inspect and police</h3>
+                <p>Some people say we should send assessors to every course to inspect standards. But think about what that actually means.</p>
+                <ul>
+                    <li>Financially unviable — sending assessors to courses in 100+ countries would require enormous fees, passed on to trainers and students</li>
+                    <li>Professionally insulting — a Senior Yoga Teacher with 8,000+ hours would not accept an individual assessor questioning their professional judgement on whether to pass or fail a graduate</li>
+                    <li>Episodic — checked once, forgotten until renewal</li>
+                    <li>Gameable — schools prepare for inspection day, then revert</li>
+                    <li>Adversarial — creates an us-vs-them dynamic between body and trainer</li>
+                    <li>No feedback loop — poor outcomes stay invisible between inspections</li>
+                </ul>
+            </div>
+            <div class="phil-card yp-model">
+                <div class="phil-label yp">YogaPros model</div>
+                <h3>Design for quality outcomes</h3>
+                <p>We set the bar high at the gate, then create systems where quality is continuous, transparent, and self-correcting.</p>
+                <ul>
+                    <li>Continuous — quality signals flowing all the time</li>
+                    <li>Transparent — graduate reviews visible to everyone</li>
+                    <li>Collaborative — trainers and graduates grow together</li>
+                    <li>Self-correcting — poor outcomes surface naturally</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SIX MECHANISMS ===== -->
+<section class="section mechanisms">
+    <div class="container">
+        <span class="section-label">How it works</span>
+        <h2>Seven mechanisms that protect standards</h2>
+        <br><br>
+
+        <!-- 1 -->
+        <div class="mechanism">
+            <div class="mech-number">1</div>
+            <div class="mech-content">
+                <h3>The highest gatekeeper standards in the industry</h3>
+                <p>The lead trainer on any YogaPros-accredited course must be a Senior Yoga Teacher — minimum 8 years and 4,000 hours of teaching experience. They must personally deliver at least 70% of the 180 minimum contact hours.</p>
+                <p>This single requirement eliminates the biggest risk in teacher training: inexperienced trainers producing unready graduates.</p>
+                <div class="mech-detail">
+                    <p><strong>Compare:</strong> Yoga Alliance USA requires just 4 years / 2,000 hours for lead trainers, and allows "Other Faculty" (non-registered trainers) to teach without equivalent experience requirements.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="mechanism">
+            <div class="mech-number">2</div>
+            <div class="mech-content">
+                <h3>Verified graduate reviews</h3>
+                <p>Every graduate from a YogaPros-accredited course can leave a review of their training — they don't need to join YogaPros to do this. We verify that the reviewer actually completed the course.</p>
+                <p>Five questions, but two matter most:</p>
+                <div class="review-questions" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;">
+                    <div class="mech-detail" style="text-align:center;">
+                        <p style="font-size:1.5rem;margin-bottom:0.3rem;">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+                        <p><strong>"Do you feel confident and ready to teach?"</strong></p>
+                    </div>
+                    <div class="mech-detail" style="text-align:center;">
+                        <p style="font-size:1.5rem;margin-bottom:0.3rem;">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+                        <p><strong>"Would you work with this trainer again?"</strong></p>
+                    </div>
+                </div>
+                <p>A trainer who consistently produces graduates who don't feel ready to teach becomes visible — no inspector needed. The reviews are public and build over time on the trainer's Brand Profile.</p>
+                <span class="mech-highlight">Self-correcting — quality surfaces naturally</span>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="mechanism">
+            <div class="mech-number">3</div>
+            <div class="mech-content">
+                <h3>Pre-course assessment</h3>
+                <p>Every YogaPros-accredited training school must run an effective pre-course assessment — ideally live and in person. This serves two purposes:</p>
+                <div class="mech-detail">
+                    <p><strong>For the trainer:</strong> Ensure the right students are accepted on the course — the right level of practice, the right attitude, and realistic expectations.</p>
+                    <p><strong>For the student:</strong> A chance to meet the trainer, experience their teaching style, and assess whether this course is the right fit — before committing time and money.</p>
+                </div>
+                <p>Two-way assessment means better fit, fewer dropouts, and higher-quality outcomes for everyone.</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="mechanism">
+            <div class="mech-number">4</div>
+            <div class="mech-content">
+                <h3>First-year graduate support</h3>
+                <p>The training environment and the real world are very different. A controlled classroom with supportive peers is nothing like walking into a studio full of strangers with injuries, expectations, and questions you didn't cover in training.</p>
+                <p>We ask trainers to support their graduate teachers through their first year of teaching. This is a win for everyone:</p>
+                <div class="win-grid">
+                    <div class="win-item">
+                        <div class="win-who">New Teacher</div>
+                        <p>Real-world guidance when they need it most. Confidence to teach safely from day one.</p>
+                    </div>
+                    <div class="win-item">
+                        <div class="win-who">Their Students</div>
+                        <p>A better-prepared teacher who has ongoing support and mentorship behind them.</p>
+                    </div>
+                    <div class="win-item">
+                        <div class="win-who">The Trainer</div>
+                        <p>Real-world data on what new teachers actually face. Keeps courses relevant and up to date.</p>
+                    </div>
+                </div>
+                <p style="margin-top:1rem;">The trainer can offer additional training (paid or free) to address real-world gaps, update their course content based on actual feedback, and build a lifelong relationship with their graduate teachers. Graduates become raving fans — and leave more reviews on the trainer's Brand Profile and Live CV.</p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="mechanism">
+            <div class="mech-number">5</div>
+            <div class="mech-content">
+                <h3>Practice requirements</h3>
+                <p>We recommend all trainees have a minimum of two years of strong, regular practice before entering teacher training. You should be able to teach from experience — meaning you can demonstrate postures to an acceptable level for teaching.</p>
+                <p>This isn't about being the most flexible person in the room. It's about having enough embodied experience to teach safely, adapt to different bodies, and know the difference between a posture that works and one that doesn't.</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="mechanism">
+            <div class="mech-number">6</div>
+            <div class="mech-content">
+                <h3>Annual trainer reviews</h3>
+                <p>Most accreditation bodies do a one-off check — a snapshot in time — then leave trainers alone until renewal. We review every trainer account and their events annually, checking for changes in standards, delivery, and compliance.</p>
+                <p>This isn't an inspection. It's an ongoing relationship. Combined with continuous graduate reviews, it means quality is monitored year-round — not just on the day someone applies for accreditation.</p>
+                <span class="mech-highlight">Continuous oversight — not a snapshot in time</span>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="mechanism">
+            <div class="mech-number">7</div>
+            <div class="mech-content">
+                <h3>Non-registered trainer requirements</h3>
+                <p>We recognise that yoga teacher training benefits from specialist knowledge — anatomy, physiology, business, mental health. Non-yoga specialists can teach up to 30% of the course content.</p>
+                <p>But they must have a minimum of 4 years and 2,000 hours of experience in their chosen field. The remaining 70% or more must be delivered by the Senior Yoga Teacher lead trainer.</p>
+                <div class="mech-detail">
+                    <p><strong>Compare:</strong> Yoga Alliance USA allows "Other Faculty" (non-registered trainers) to teach on courses with no equivalent experience requirement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<section class="comparison">
+    <div class="container">
+        <span class="section-label" style="text-align:center;display:block;color:var(--orange);">Foundation Training — Side by side</span>
+        <h2>Training new yoga teachers: how YogaPros compares</h2>
+        <p>These standards apply to Foundation training — courses that take practitioners to qualified yoga teacher status. No shortcuts. No exceptions.</p>
+
+        <table class="comp-table">
+            <thead>
+                <tr>
+                    <th>Requirement</th>
+                    <th>Yoga Alliance USA</th>
+                    <th>YogaPros</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lead teacher experience</td>
+                    <td class="dim">4 years / 2,000 hrs</td>
+                    <td class="highlight-cell">8 years / 4,000 hrs</td>
+                </tr>
+                <tr>
+                    <td>Lead teacher status</td>
+                    <td class="dim">E-RYT (lower bar)</td>
+                    <td class="highlight-cell">Senior Yoga Teacher only</td>
+                </tr>
+                <tr>
+                    <td>Lead teacher delivery</td>
+                    <td class="dim">No minimum %</td>
+                    <td class="highlight-cell">70% of contact hours minimum</td>
+                </tr>
+                <tr>
+                    <td>Non-registered trainers</td>
+                    <td class="dim">Yes — "Other Faculty"</td>
+                    <td class="highlight-cell">Up to 30% — must have 4yrs / 2,000hrs in their field</td>
+                </tr>
+                <tr>
+                    <td>Minimum contact hours</td>
+                    <td class="dim">30 synchronous (of 200)</td>
+                    <td class="highlight-cell">180 hours minimum</td>
+                </tr>
+                <tr>
+                    <td>100% distance learning</td>
+                    <td class="dim">Explicitly allowed</td>
+                    <td class="highlight-cell">Never</td>
+                </tr>
+                <tr>
+                    <td>Pre-recorded content</td>
+                    <td class="dim">Up to 85% allowed</td>
+                    <td class="highlight-cell">Never accepted</td>
+                </tr>
+                <tr>
+                    <td>Pre-course assessment</td>
+                    <td class="dim">Not required</td>
+                    <td class="highlight-cell">Required (ideally live)</td>
+                </tr>
+                <tr>
+                    <td>Graduate reviews</td>
+                    <td class="dim">Not collected</td>
+                    <td class="highlight-cell">Verified and public</td>
+                </tr>
+                <tr>
+                    <td>Post-graduation support</td>
+                    <td class="dim">Not required</td>
+                    <td class="highlight-cell">First-year support recommended</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="comp-note">Comparison based on Yoga Alliance USA "Standards for RYS Credentials" published requirements and YogaPros Foundation accreditation standards.</p>
+    </div>
+</section>
+
+<!-- ===== DEVELOPMENT TRAINING ===== -->
+<section class="section dev-training" id="development">
+    <div class="container">
+        <span class="section-label">Development Training</span>
+        <h2>Further training for qualified yoga teachers</h2>
+        <p class="dev-intro">
+            Foundation training creates new teachers. Development training grows existing ones. <strong>These are qualified professionals continuing their education</strong> — the standards reflect that distinction, just as they do in medicine, law, and every other profession.
+        </p>
+
+        <!-- PRE-RECORDED CLARITY -->
+        <div class="pre-recorded-box">
+            <h3>A clear distinction on pre-recorded content</h3>
+            <div class="pre-recorded-grid">
+                <div class="pre-rec-card foundation">
+                    <div class="prc-label">Foundation Training</div>
+                    <p><strong>Pre-recorded content: never accepted.</strong> You cannot learn to teach yoga from a video. Foundation training requires 180 minimum contact hours with a Senior Yoga Teacher who has 8,000+ hours of experience. There are no shortcuts to becoming a qualified teacher.</p>
+                </div>
+                <div class="pre-rec-card development">
+                    <div class="prc-label">Development Training</div>
+                    <p><strong>Pre-recorded content: accepted for qualified teachers.</strong> A qualified professional can learn new material through pre-recorded content — just as a doctor watches pre-recorded lectures for CPD. The difference: <strong>assessment is always live</strong> (in person or via Zoom). You prove competence face to face.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TWO TIERS -->
+        <div class="tier-grid">
+            <div class="tier-card">
+                <div class="tier-label regular">Regular Development</div>
+                <h3>Continuing professional development</h3>
+                <p>Further training for qualified yoga teachers to deepen their skills, expand their knowledge, and maintain their professional edge.</p>
+                <ul class="tier-reqs">
+                    <li>Minimum 28 hours total</li>
+                    <li>Pre-recorded content accepted</li>
+                    <li>Assessment must be live (in person or via Zoom)</li>
+                    <li>Lead trainer: EYT or equivalent (min 4yrs / 2,000hrs)</li>
+                    <li>For existing qualified yoga teachers only</li>
+                </ul>
+            </div>
+            <div class="tier-card specialist">
+                <div class="tier-label specialist">Specialist Development</div>
+                <h3>Higher-risk specialist training</h3>
+                <p>Training in specialist categories that require hands-on competence. These carry higher risk and earn a verified specialty badge on your Live CV.</p>
+                <ul class="tier-reqs">
+                    <li>Minimum 28 contact hours, 40 total hours</li>
+                    <li>Must be delivered live (in person or online live)</li>
+                    <li>No pre-recorded content — the risk demands it</li>
+                    <li>Lead trainer: EYT or equivalent (min 4yrs / 2,000hrs in topic)</li>
+                    <li>Earns a verified specialty badge on your Live CV</li>
+                    <li>Only qualified teachers can claim these specialties</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SPECIALTY CATEGORIES -->
+        <h3 style="margin-bottom:1rem;">Specialist categories</h3>
+        <p style="font-size:0.92rem;color:var(--text-light);font-weight:300;margin-bottom:1.5rem;">Complete specialist training in any of these categories to earn a verified badge on your Live CV — visible to employers, studios, and students searching for specialist teachers.</p>
+        <div class="specialty-grid">
+            <div class="specialty-tag">Acro Yoga</div>
+            <div class="specialty-tag">Aerial Yoga</div>
+            <div class="specialty-tag">Ayurvedic Massage</div>
+            <div class="specialty-tag">Fertility Yoga</div>
+            <div class="specialty-tag">Kids Yoga</div>
+            <div class="specialty-tag">Meditation &amp; Mindfulness</div>
+            <div class="specialty-tag">Menopause Yoga</div>
+            <div class="specialty-tag">Post-Natal Yoga</div>
+            <div class="specialty-tag">Pranayama &amp; Breathwork</div>
+            <div class="specialty-tag">Pregnancy Yoga</div>
+            <div class="specialty-tag">Sports Yoga</div>
+            <div class="specialty-tag">Thai Yoga Massage</div>
+            <div class="specialty-tag">Trauma-Informed Yoga</div>
+            <div class="specialty-tag">Yoga for Cancer</div>
+            <div class="specialty-tag">Yoga for Mental Health</div>
+            <div class="specialty-tag">Yoga for Teens</div>
+            <div class="specialty-tag">Yoga Nidra</div>
+            <div class="specialty-tag">Yogalates</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY IT MATTERS ===== -->
+<section class="section why-matters">
+    <div class="container">
+        <span class="section-label">Why it matters</span>
+        <h2>Standards protect everyone</h2>
+        <div class="matters-grid">
+            <div class="matters-card">
+                <div class="mc-for">For Teachers</div>
+                <h3>Your training means something</h3>
+                <p>When you train with a YogaPros-accredited school, your qualification carries weight. Employers, studios, and students can see the standards behind it. Your credential isn't just a certificate — it's a professional marker.</p>
+            </div>
+            <div class="matters-card">
+                <div class="mc-for">For Students</div>
+                <h3>Your teacher is prepared</h3>
+                <p>When you take a class with a YogaPros-registered teacher, you know their training met rigorous standards, their trainer was deeply experienced, and they have ongoing professional support. You're in safe hands.</p>
+            </div>
+            <div class="matters-card">
+                <div class="mc-for">For the Profession</div>
+                <h3>The bar keeps rising</h3>
+                <p>Every training school that meets these standards raises the floor for the entire industry. Graduate reviews create accountability. First-year support builds better teachers. The profession grows stronger.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOR TRAINING SCHOOLS ===== -->
+<section class="section for-schools">
+    <div class="container">
+        <span class="section-label">For Training Schools</span>
+        <h2>How YogaPros accreditation helps your course stand out</h2>
+        <p class="schools-intro">
+            There are thousands of yoga teacher training courses. Most look the same from the outside. <strong>YogaPros accreditation gives prospective students a reason to choose yours</strong> — because they can see the standards behind it, read verified reviews from real graduates, and contact them directly.
+        </p>
+
+        <div class="benefit-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">&#128171;</div>
+                <h3>Instant credibility</h3>
+                <p>YogaPros accreditation signals that your course meets the highest standards in the industry. Lead trainer with 8 years and 4,000+ hours. 180 minimum contact hours. No pre-recorded shortcuts. When a prospective student compares you to a non-accredited course, the difference is obvious.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#127760;</div>
+                <h3>Visibility in the ecosystem</h3>
+                <p>Your course appears in the YogaPros ecosystem — searchable by 10,000+ registered teachers and the students looking for them. Your Brand Profile showcases your training school alongside your reviews, graduates, and credentials. You're discoverable, not invisible.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#11088;</div>
+                <h3>Verified graduate reviews</h3>
+                <p>Every graduate can leave a verified review. These build over time on your Brand Profile — real social proof from real people who completed your course. Unlike generic review sites, these are verified and specific to teacher training outcomes.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#128172;</div>
+                <h3>Prospective students can DM reviewers</h3>
+                <p>This is the feature that changes everything. A prospective student can read your reviews, then message the reviewer directly through the YogaPros platform to ask questions about the trainer, the course, the experience. Real conversations with real graduates — the most powerful trust signal there is.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#127942;</div>
+                <h3>Professional recognition</h3>
+                <p>Your graduates earn recognised YogaPros credentials from day one. They can immediately register, build their Live CV, and start their professional journey with a credential that carries weight with employers, studios, and students worldwide.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">&#128640;</div>
+                <h3>Competitive differentiation</h3>
+                <p>In a market where anyone can run a weekend course and call it "teacher training," YogaPros accreditation separates the serious from the superficial. Your standards become your marketing. Your reviews become your sales team.</p>
+            </div>
+        </div>
+
+        <div class="ecosystem-box">
+            <h3>How a prospective student finds and trusts your course</h3>
+            <p>The YogaPros ecosystem creates a decision path that no brochure or website can replicate.</p>
+            <div class="eco-flow">
+                <div class="eco-step">
+                    <div class="step-num">1</div>
+                    <h4>Discover</h4>
+                    <p>Prospective student finds your Brand Profile — either through the YogaPros ecosystem or because you sent them there directly from your own marketing. "Don't take my word for it — talk to my graduates."</p>
+                </div>
+                <div class="eco-step">
+                    <div class="step-num">2</div>
+                    <h4>Research</h4>
+                    <p>They read verified reviews from real graduates. Real answers to the questions that matter: "Did you feel ready to teach?" and "Would you train with them again?" Hosted on the global industry-leading professional body — not your own website.</p>
+                </div>
+                <div class="eco-step">
+                    <div class="step-num">3</div>
+                    <h4>Connect</h4>
+                    <p>They message a graduate directly to ask personal questions — with no input from you, the trainer. Independent. Verified. The highest trust signal in the industry.</p>
+                </div>
+            </div>
+            <p style="text-align:center;font-size:0.88rem;color:var(--text-light);margin-top:1.5rem;font-weight:300;font-style:italic;">"Don't take my word for how good the course is — talk directly to past graduates with no input from me, via YogaPros, the global industry-leading professional body." That's a line no other accreditation gives you.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CAREER PROGRESSION ===== -->
+<section class="section career-progression" id="progression">
+    <div class="container">
+        <span class="section-label">The bigger picture</span>
+        <h2>From graduate to accredited trainer</h2>
+        <p class="progression-intro">
+            Your accredited training doesn't just qualify your graduates — it sets them on a professional path. As they gain experience, <strong>they become the next generation of accredited trainers</strong> themselves.
+        </p>
+
+        <div class="progression-flow">
+            <div class="prog-stage">
+                <div class="prog-title">Graduate</div>
+                <div class="prog-desc">Completes YP-accredited Foundation training. Registers on YogaPros. Builds Live CV.</div>
+            </div>
+            <div class="prog-arrow">&rarr;</div>
+            <div class="prog-stage">
+                <div class="prog-title">EYT</div>
+                <div class="prog-desc">4+ years, 2,000+ hours. Can lead accredited Development training courses.</div>
+            </div>
+            <div class="prog-arrow">&rarr;</div>
+            <div class="prog-stage">
+                <div class="prog-title">SYT</div>
+                <div class="prog-desc">8+ years, 4,000+ hours. Can lead accredited Foundation training — training the next generation.</div>
+            </div>
+            <div class="prog-arrow">&rarr;</div>
+            <div class="prog-stage active">
+                <div class="prog-title">Accredited Trainer</div>
+                <div class="prog-desc">Runs their own YP-accredited courses. Builds Brand Profile. Earns verified graduate reviews.</div>
+            </div>
+        </div>
+
+        <div class="prog-note">
+            <p><strong>Every graduate is a future trainer.</strong> An EYT can run accredited Development training — specialist workshops, CPD courses, niche topics they've mastered. An SYT can run accredited Foundation training — building the next generation of teachers. Your graduates don't just teach yoga. They grow into leaders who raise the standard of the entire profession.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="page-cta">
+    <div class="container">
+        <h2>Three ways to work with YogaPros</h2>
+        <p class="cta-sub">Whether you're training new teachers, running development courses, or building your teaching career — there's a path for you.</p>
+
+        <div class="cta-paths">
+            <!-- FOUNDATION TRAINING -->
+            <div class="cta-path">
+                <div class="path-label foundation">Foundation Training</div>
+                <h3>Train new yoga teachers</h3>
+                <p>Accredit your teacher training course to the highest standards in the industry.</p>
+                <ul class="cta-audiences">
+                    <li>Thinking about offering teacher training</li>
+                    <li>Building a course but haven't launched</li>
+                    <li>Currently running teacher training</li>
+                    <li>Returning to YogaPros after a break</li>
+                    <li>Moving from another accreditation body</li>
+                </ul>
+                <a href="index.html#pricing" class="btn-path">Accredit a Foundation course &rarr;</a>
+            </div>
+
+            <!-- DEVELOPMENT TRAINING -->
+            <div class="cta-path">
+                <div class="path-label development">Development Training</div>
+                <h3>Run accredited CPD &amp; specialist courses</h3>
+                <p>Offer further training for qualified teachers — regular CPD or specialist categories with verified badges.</p>
+                <ul class="cta-audiences">
+                    <li>EYTs ready to run CPD workshops</li>
+                    <li>Specialist trainers (pregnancy, kids, trauma, etc.)</li>
+                    <li>Existing trainers adding development courses</li>
+                    <li>New graduates progressing to EYT/SYT</li>
+                </ul>
+                <a href="index.html#pricing" class="btn-path">Accredit a Development course &rarr;</a>
+            </div>
+
+            <!-- TEACHERS -->
+            <div class="cta-path">
+                <div class="path-label teacher">For Teachers</div>
+                <h3>Join as a professional member</h3>
+                <p>Build your Live CV, get listed in the ecosystem, and access professional tools and support.</p>
+                <ul class="cta-audiences">
+                    <li>Newly qualified yoga teachers</li>
+                    <li>Experienced teachers seeking recognition</li>
+                    <li>Teachers looking for CPD opportunities</li>
+                    <li>Anyone wanting to stand out professionally</li>
+                </ul>
+                <a href="index.html#pricing" class="btn-path">Join YogaPros &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>YogaPros &mdash; A standards-led professional body for yoga teachers. Not-for-profit Scottish company (SC502923). Based in Edinburgh.</p>
+</footer>
+
+<script>
+// Animate elements on scroll
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.mechanism, .phil-card, .matters-card, .review-q, .benefit-card, .eco-step, .tier-card, .pre-rec-card, .specialty-tag, .prog-stage, .cta-path').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Readiness Check — Yoga Pros</title>
+    <meta name="description" content="Discover exactly where you are on your yoga career path — across Teaching, Business, and Mindset — and get your personalised action plan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --teal: #0D9B8C; --teal-dark: #0A7F73; --teal-light: #E3FFF8;
+            --teal-pale: #F0FBF8; --yellow: #FFC82A; --yellow-light: #FFF4D6;
+            --charcoal: #1A1A2E; --text: #2D3436; --text-light: #636E72;
+            --white: #FFFFFF; --off-white: #FAFCFB; --border: #E8EFED;
+            --red: #E74C3C; --red-soft: #FDE8E8; --orange: #F39C12;
+            --green: #27AE60; --green-light: #E8F8F0;
+            --purple: #7C3AED; --purple-light: #EDE9FE;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', -apple-system, sans-serif;
+            color: var(--text); line-height: 1.6;
+            background: linear-gradient(170deg, var(--teal-light) 0%, var(--white) 30%, var(--off-white) 100%);
+            min-height: 100vh;
+        }
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2.5rem; background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--charcoal); text-decoration: none; letter-spacing: -0.5px; }
+        .logo span { color: var(--teal); }
+        .nav-back { color: var(--text-light); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+        .nav-back:hover { color: var(--teal); }
+        .container { max-width: 680px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+        /* INTRO */
+        .intro { text-align: center; padding: 2rem 0; }
+        .intro-badge { display: inline-block; background: var(--yellow-light); color: #B8860B; padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 1.5rem; }
+        .intro h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--charcoal); letter-spacing: -1px; margin-bottom: 1rem; line-height: 1.15; }
+        .intro h1 em { font-style: normal; color: var(--teal); }
+        .intro > p { font-size: 1.05rem; color: var(--text-light); max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
+        .intro-details { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+        .intro-detail { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; color: var(--text-light); font-weight: 500; }
+        .intro-detail .icon { width: 32px; height: 32px; background: var(--teal-pale); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+
+        /* PILLAR INTRO CARDS */
+        .pillar-previews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+        .pillar-preview { text-align: center; padding: 1.2rem 0.8rem; border-radius: 14px; border: 1px solid var(--border); background: var(--white); }
+        .pillar-preview .pp-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+        .pillar-preview h4 { font-size: 0.82rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.2rem; }
+        .pillar-preview p { font-size: 0.7rem; color: var(--text-light); }
+
+        /* LEAD CAPTURE */
+        .lead-capture { background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+        .lead-capture h2 { font-size: 1.25rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+        .lead-capture .sub { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.1rem; }
+        .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+        .form-group input, .form-group select { width: 100%; padding: 0.85rem 1rem; border: 2px solid var(--border); border-radius: 12px; font-size: 0.95rem; font-family: inherit; outline: none; transition: border 0.3s; background: var(--white); }
+        .form-group input:focus, .form-group select:focus { border-color: var(--teal); }
+        .form-note { font-size: 0.78rem; color: #aaa; text-align: center; margin-top: 1rem; }
+
+        /* BUTTONS */
+        .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: var(--teal); color: var(--white); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: all 0.3s; font-family: inherit; }
+        .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(13,155,140,0.25); }
+        .btn-primary:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+        .btn-yellow { background: var(--yellow); color: var(--charcoal); }
+        .btn-yellow:hover { background: #e6b425; box-shadow: 0 6px 24px rgba(255,200,42,0.3); }
+
+        /* PROGRESS */
+        .progress-container { display: none; margin-bottom: 2rem; }
+        .progress-container.active { display: block; }
+        .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+        .progress-label { font-size: 0.82rem; font-weight: 600; color: var(--text-light); }
+        .progress-count { font-size: 0.82rem; font-weight: 700; color: var(--teal); }
+        .progress-track { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; width: 0%; }
+
+        /* QUIZ */
+        .quiz-card { display: none; background: var(--white); border-radius: 20px; padding: 2.5rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 1px solid var(--border); animation: fadeIn 0.35s ease; }
+        .quiz-card.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .pillar-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 0.8rem; padding: 0.3rem 0.8rem; border-radius: 50px; }
+        .pillar-badge.teaching { background: var(--teal-light); color: var(--teal); }
+        .pillar-badge.business { background: var(--yellow-light); color: #B8860B; }
+        .pillar-badge.mindset { background: var(--purple-light); color: var(--purple); }
+        .pillar-badge.safety { background: var(--green-light); color: var(--green); }
+        .quiz-card h2 { font-size: 1.25rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.5rem; line-height: 1.4; }
+        .options { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .option { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border: 2px solid var(--border); border-radius: 14px; cursor: pointer; transition: all 0.2s; }
+        .option:hover { border-color: var(--teal); background: var(--teal-pale); }
+        .option.selected { border-color: var(--teal); background: var(--teal-light); }
+        .option-radio { width: 22px; height: 22px; min-width: 22px; border: 2px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+        .option.selected .option-radio { border-color: var(--teal); background: var(--teal); }
+        .option.selected .option-radio::after { content: ''; width: 8px; height: 8px; background: var(--white); border-radius: 50%; }
+        .option-text { font-size: 0.95rem; font-weight: 500; color: var(--text); }
+        .option.selected .option-text { font-weight: 600; }
+        .quiz-nav { display: flex; gap: 0.75rem; }
+        .quiz-nav .btn-back { flex: 0 0 auto; background: none; border: 2px solid var(--border); color: var(--text-light); padding: 1rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem; cursor: pointer; font-family: inherit; transition: all 0.2s; }
+        .quiz-nav .btn-back:hover { border-color: var(--text-light); color: var(--text); }
+        .quiz-nav .btn-primary { flex: 1; }
+
+        /* RESULTS */
+        .results { display: none; animation: fadeIn 0.5s ease; }
+        .results.active { display: block; }
+        .results-header { text-align: center; margin-bottom: 2.5rem; }
+        .results-header h1 { font-size: 1.8rem; font-weight: 800; color: var(--charcoal); margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .results-header p { font-size: 1rem; color: var(--text-light); }
+
+        /* PILLAR RESULTS */
+        .pillar-result { background: var(--white); border-radius: 20px; padding: 2rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 1px solid var(--border); margin-bottom: 1.5rem; }
+        .pillar-result-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+        .pillar-result-header h3 { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); display: flex; align-items: center; gap: 0.5rem; }
+        .pillar-result-header .pillar-score { font-size: 1.4rem; font-weight: 800; }
+        .pillar-bar { height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; margin-bottom: 1rem; }
+        .pillar-bar-fill { height: 100%; border-radius: 5px; transition: width 1s ease 0.3s; width: 0%; }
+        .pillar-position { padding: 1rem; background: var(--off-white); border-radius: 12px; margin-bottom: 1rem; }
+        .position-path { display: flex; align-items: center; gap: 0; justify-content: space-between; margin-bottom: 0.5rem; }
+        .position-step { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; flex: 1; }
+        .position-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--border); background: var(--white); position: relative; z-index: 1; }
+        .position-dot.active { background: var(--teal); border-color: var(--teal); }
+        .position-dot.current { background: var(--yellow); border-color: var(--yellow); box-shadow: 0 0 0 4px rgba(255,200,42,0.3); }
+        .position-step span { font-size: 0.65rem; color: var(--text-light); font-weight: 500; text-align: center; }
+        .position-step.is-current span { color: var(--charcoal); font-weight: 700; }
+        .pillar-insight { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+        .pillar-insight strong { color: var(--charcoal); }
+
+        /* MINDSET CALLOUT */
+        .mindset-callout { background: linear-gradient(135deg, #1A1A2E, #2d2456); color: var(--white); border-radius: 20px; padding: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
+        .mindset-callout h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.6rem; }
+        .mindset-callout p { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; max-width: 500px; margin: 0 auto; }
+        .mindset-callout .mc-score { font-size: 3rem; font-weight: 800; color: var(--yellow); margin: 1rem 0 0.3rem; }
+        .mindset-callout .mc-label { font-size: 0.85rem; opacity: 0.6; }
+
+        /* ROI CARD */
+        .roi-card { background: var(--teal-light); border-radius: 20px; padding: 2rem; border: 1px solid #b8e6de; margin-bottom: 1.5rem; }
+        .roi-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1rem; text-align: center; }
+        .roi-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 0.88rem; }
+        .roi-row:last-of-type { border-bottom: none; }
+        .roi-row .included { color: var(--teal); font-weight: 700; font-size: 0.8rem; }
+        .roi-row .cost { color: var(--text-light); font-weight: 600; text-decoration: line-through; opacity: 0.6; }
+        .roi-total-row { display: flex; justify-content: space-between; margin-top: 1rem; padding-top: 1rem; border-top: 2px solid rgba(0,0,0,0.08); font-weight: 800; font-size: 1.1rem; }
+        .roi-total-row .teal { color: var(--teal); }
+
+        /* WHAT YOU UNLOCK */
+        .unlock-card { background: var(--white); border-radius: 20px; padding: 2rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); border: 1px solid var(--border); margin-bottom: 1.5rem; }
+        .unlock-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+        .unlock-card > p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.2rem; line-height: 1.6; }
+        .unlock-list { list-style: none; padding: 0; }
+        .unlock-list li { padding: 0.5rem 0; font-size: 0.9rem; color: var(--text); display: flex; align-items: center; gap: 0.6rem; }
+        .u-check { width: 20px; height: 20px; min-width: 20px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 0.6rem; font-weight: 800; }
+
+        /* CTA CARD */
+        .cta-card { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); border-radius: 20px; padding: 2.5rem; text-align: center; color: var(--white); margin-top: 2rem; }
+        .cta-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.6rem; }
+        .cta-card > p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 0.5rem; line-height: 1.6; }
+        .cta-price { font-size: 2.2rem; font-weight: 800; margin: 1rem 0 0.3rem; }
+        .cta-price small { font-size: 1rem; font-weight: 500; opacity: 0.7; }
+        .cta-period { font-size: 0.82rem; opacity: 0.6; margin-bottom: 1.5rem; }
+        .cta-card .btn-yellow { width: auto; padding: 1rem 2.5rem; display: inline-flex; font-size: 1.05rem; }
+        .cta-card .cta-note { font-size: 0.78rem; opacity: 0.5; margin-top: 0.8rem; }
+
+        /* EXCUSES */
+        .excuses { text-align: center; margin-top: 2rem; padding: 2rem; background: var(--white); border-radius: 20px; border: 1px solid var(--border); }
+        .excuses h4 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1rem; }
+        .excuse { font-size: 0.88rem; color: var(--text-light); margin-bottom: 0.5rem; line-height: 1.6; }
+        .excuse .strike { text-decoration: line-through; opacity: 0.5; }
+        .excuse .rebuttal { color: var(--teal); font-weight: 600; }
+
+        /* SHARE */
+        .share-row { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .share-row button { background: var(--white); border: 1px solid var(--border); border-radius: 50px; padding: 0.6rem 1.2rem; font-size: 0.82rem; font-weight: 600; color: var(--text-light); cursor: pointer; font-family: inherit; transition: all 0.2s; }
+        .share-row button:hover { border-color: var(--teal); color: var(--teal); }
+
+        @media (max-width: 600px) {
+            nav { padding: 0.8rem 1.2rem; }
+            .container { padding: 1.5rem 1rem 3rem; }
+            .lead-capture, .quiz-card, .pillar-result, .unlock-card, .roi-card { padding: 1.5rem; }
+            .intro h1 { font-size: 1.6rem; }
+            .pillar-previews { grid-template-columns: 1fr; }
+            .cta-card { padding: 1.8rem; }
+            .position-step span { font-size: 0.58rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">Yoga<span>Pros</span></a>
+    <a href="index.html" class="nav-back">&larr; Back to home</a>
+</nav>
+
+<div class="container">
+    <!-- INTRO -->
+    <div class="intro" id="intro-screen">
+        <div class="intro-badge">Free Career Assessment</div>
+        <h1>Where are you across the <em>three pillars</em> of a sustainable yoga career?</h1>
+        <p>Most teachers only focus on their teaching. But a sustainable career is built on three pillars — Teaching, Business, and Mindset. Find out where you're strong, where you're stuck, and what to do next.</p>
+        <div class="intro-details">
+            <div class="intro-detail"><div class="icon">&#9202;</div> 3 minutes</div>
+            <div class="intro-detail"><div class="icon">&#128202;</div> Pillar-by-pillar results</div>
+            <div class="intro-detail"><div class="icon">&#128161;</div> Personalised action plan</div>
+        </div>
+
+        <div class="pillar-previews">
+            <div class="pillar-preview">
+                <div class="pp-icon">&#129495;</div>
+                <h4>Teaching</h4>
+                <p>Your craft &amp; experience</p>
+            </div>
+            <div class="pillar-preview">
+                <div class="pp-icon">&#128200;</div>
+                <h4>Business</h4>
+                <p>Your income model</p>
+            </div>
+            <div class="pillar-preview">
+                <div class="pp-icon">&#128161;</div>
+                <h4>Wellbeing &amp; Mindset</h4>
+                <p>Your beliefs about money</p>
+            </div>
+        </div>
+
+        <div class="lead-capture">
+            <h2>Let's find out where you stand</h2>
+            <p class="sub">We'll email your personalised results and action plan.</p>
+            <form id="lead-form">
+                <div class="form-group">
+                    <label for="lead-name">Your name</label>
+                    <input type="text" id="lead-name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lead-email">Email address</label>
+                    <input type="email" id="lead-email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="lead-role">I am a...</label>
+                    <select id="lead-role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="teacher">Yoga Teacher</option>
+                        <option value="trainer">Yoga Teacher Trainer</option>
+                        <option value="student">Aspiring Yoga Teacher</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Start My Readiness Check &rarr;</button>
+                <p class="form-note">No spam. Just your results and your next steps.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-container" id="progress">
+        <div class="progress-header">
+            <span class="progress-label" id="progress-pillar">Teaching</span>
+            <span class="progress-count" id="progress-text">1 of 12</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+
+    <div id="quiz-container"></div>
+    <div class="results" id="results-screen"></div>
+</div>
+
+<script>
+const QUESTIONS = [
+    // TEACHING (3)
+    {
+        pillar: 'teaching', pillarLabel: 'Teaching', badgeClass: 'teaching',
+        question: 'How long have you been teaching yoga since qualifying?',
+        options: [
+            { text: "I haven't qualified yet — I'm still in training or considering it", score: 1 },
+            { text: "Less than 2 years", score: 2 },
+            { text: "2–4 years", score: 3 },
+            { text: "4–8 years (2,000+ teaching hours)", score: 4 },
+            { text: "8+ years (4,000+ teaching hours)", score: 5 }
+        ]
+    },
+    {
+        pillar: 'teaching', pillarLabel: 'Teaching', badgeClass: 'teaching',
+        question: 'How much continuing professional development (CPD) have you done in the past 12 months?',
+        options: [
+            { text: "None — I haven't had time or budget", score: 1 },
+            { text: "A workshop or two, mostly self-directed", score: 2 },
+            { text: "I regularly attend workshops and trainings", score: 3 },
+            { text: "I have a structured CPD plan and track my hours", score: 4 }
+        ]
+    },
+    {
+        pillar: 'teaching', pillarLabel: 'Teaching', badgeClass: 'teaching',
+        question: 'Do you hold any professional accreditation or membership?',
+        options: [
+            { text: "No — I haven't looked into it", score: 1 },
+            { text: "I've thought about it but haven't joined", score: 2 },
+            { text: "I was a member but let it lapse", score: 2 },
+            { text: "Yes, I actively maintain professional membership", score: 4 }
+        ]
+    },
+    // BUSINESS (4)
+    {
+        pillar: 'business', pillarLabel: 'Business', badgeClass: 'business',
+        question: 'How would you describe your current income from yoga?',
+        options: [
+            { text: "I don't earn from yoga yet — it's a passion project", score: 1 },
+            { text: "Some income, but unpredictable and not enough to live on", score: 2 },
+            { text: "It's my main income but I'm trading hours for money and financially stretched", score: 3 },
+            { text: "I have a sustainable, diversified income from yoga", score: 5 }
+        ]
+    },
+    {
+        pillar: 'business', pillarLabel: 'Business', badgeClass: 'business',
+        question: 'Which best describes your current business model?',
+        options: [
+            { text: "I teach classes for studios — I'm paid per class", score: 1 },
+            { text: "I teach my own classes plus some privates or workshops", score: 2 },
+            { text: "I have my own brand — classes, workshops, retreats, or online offerings", score: 4 },
+            { text: "I run a yoga business with multiple revenue streams, possibly employing others", score: 5 }
+        ]
+    },
+    {
+        pillar: 'business', pillarLabel: 'Business', badgeClass: 'business',
+        question: 'How confident are you in your pricing?',
+        options: [
+            { text: "I mostly charge what everyone else charges", score: 1 },
+            { text: "I have prices but I'm not confident they reflect my value", score: 2 },
+            { text: "I've thought about it but still second-guess myself", score: 3 },
+            { text: "I have an intentional pricing strategy I review regularly", score: 5 }
+        ]
+    },
+    {
+        pillar: 'business', pillarLabel: 'Business', badgeClass: 'business',
+        question: 'How easy is it for new students and employers to find you?',
+        options: [
+            { text: "I don't have much online presence at all", score: 1 },
+            { text: "I have social media but no professional profile or website", score: 2 },
+            { text: "I have a website or profile but don't get many enquiries from it", score: 3 },
+            { text: "Students and employers regularly find and contact me online", score: 5 }
+        ]
+    },
+    // WELLBEING & MINDSET (3)
+    {
+        pillar: 'mindset', pillarLabel: 'Wellbeing & Mindset', badgeClass: 'mindset',
+        question: 'Which statement feels most true for you right now?',
+        options: [
+            { text: "I feel guilty charging for yoga — it should be accessible to everyone", score: 1 },
+            { text: "I know I should charge more, but I'm afraid students won't pay", score: 2 },
+            { text: "I'm working on my relationship with money, but old beliefs creep back", score: 3 },
+            { text: "I believe my expertise has real value and I price accordingly", score: 5 }
+        ]
+    },
+    {
+        pillar: 'mindset', pillarLabel: 'Wellbeing & Mindset', badgeClass: 'mindset',
+        question: 'When you think about investing in your career, what happens?',
+        options: [
+            { text: "I tell myself I'll sort it out next month (and keep saying that)", score: 1 },
+            { text: "I want to but convince myself I can't afford it or don't have time", score: 2 },
+            { text: "I've invested in some training but avoid the business and money side", score: 3 },
+            { text: "I regularly invest in both my teaching skills and my business growth", score: 5 }
+        ]
+    },
+    {
+        pillar: 'mindset', pillarLabel: 'Wellbeing & Mindset', badgeClass: 'mindset',
+        question: 'How do you feel about the yoga industry right now?',
+        options: [
+            { text: "It's oversaturated — there are too many teachers and not enough opportunity", score: 1 },
+            { text: "It's tough out there but maybe there's a way to make it work", score: 2 },
+            { text: "I think there's opportunity but I'm not sure how to access it", score: 3 },
+            { text: "The industry is growing — I just need to position myself properly", score: 5 }
+        ]
+    },
+    // SAFETY (2)
+    {
+        pillar: 'safety', pillarLabel: 'Safety & Protection', badgeClass: 'safety',
+        question: 'Do you have professional insurance for your teaching?',
+        options: [
+            { text: "No — I didn't know I needed it", score: 1 },
+            { text: "I've been meaning to sort it out", score: 2 },
+            { text: "I have basic cover but I'm not sure it's adequate", score: 3 },
+            { text: "Yes — comprehensive, up-to-date professional insurance", score: 5 }
+        ]
+    },
+    {
+        pillar: 'safety', pillarLabel: 'Safety & Protection', badgeClass: 'safety',
+        question: 'If a student was injured in your class tomorrow, how protected are you?',
+        options: [
+            { text: "I honestly don't know — I haven't thought about it", score: 1 },
+            { text: "I'd be worried — I'm not sure my cover is enough", score: 2 },
+            { text: "I think I'm covered but I haven't checked recently", score: 3 },
+            { text: "Fully protected — insurance, clear safety practices, and documented procedures", score: 5 }
+        ]
+    }
+];
+
+const PILLARS = {
+    teaching: { label: 'Teaching', icon: '&#129495;', color: '#0D9B8C', questions: [0,1,2],
+        levels: ['Not Yet Qualified', 'Newly Qualified', 'Yoga Teacher', 'Experienced Teacher', 'Senior Teacher'],
+        maxScore: 13 },
+    business: { label: 'Business', icon: '&#128200;', color: '#D4A017', questions: [3,4,5,6],
+        levels: ['Not Started', 'Self-Employed (time for money)', 'Building a Brand', 'Business Owner'],
+        maxScore: 20 },
+    mindset: { label: 'Wellbeing & Mindset', icon: '&#128161;', color: '#7C3AED', questions: [7,8,9],
+        levels: ['Deep Scarcity', 'Scarcity', 'Awareness', 'Abundance'],
+        maxScore: 15 },
+    safety: { label: 'Safety & Protection', icon: '&#128737;', color: '#27AE60', questions: [10,11],
+        levels: ['Unprotected', 'At Risk', 'Partially Covered', 'Fully Protected'],
+        maxScore: 10 }
+};
+
+let currentQuestion = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+let leadData = {};
+
+document.getElementById('lead-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    leadData = {
+        name: document.getElementById('lead-name').value,
+        email: document.getElementById('lead-email').value,
+        role: document.getElementById('lead-role').value,
+        date: new Date().toISOString()
+    };
+    const leads = JSON.parse(localStorage.getItem('yogapros_leads') || '[]');
+    leads.push(leadData);
+    localStorage.setItem('yogapros_leads', JSON.stringify(leads));
+    document.getElementById('intro-screen').style.display = 'none';
+    document.getElementById('progress').classList.add('active');
+    renderQuestion(0);
+});
+
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('name')) document.getElementById('lead-name').value = params.get('name');
+    if (params.get('email')) document.getElementById('lead-email').value = params.get('email');
+    if (params.get('role')) document.getElementById('lead-role').value = params.get('role');
+})();
+
+function getPillarColor(pillar) {
+    const colors = { teaching: '#0D9B8C', business: '#D4A017', mindset: '#7C3AED', safety: '#27AE60' };
+    return colors[pillar] || '#0D9B8C';
+}
+
+function getProgressGradient() {
+    const q = QUESTIONS[currentQuestion];
+    const colors = { teaching: 'var(--teal)', business: 'var(--yellow)', mindset: '#7C3AED', safety: '#27AE60' };
+    return colors[q.pillar] || 'var(--teal)';
+}
+
+function updateProgress() {
+    const pct = ((currentQuestion + 1) / QUESTIONS.length) * 100;
+    const fill = document.getElementById('progress-fill');
+    fill.style.width = pct + '%';
+    fill.style.background = getProgressGradient();
+    document.getElementById('progress-text').textContent = (currentQuestion + 1) + ' of ' + QUESTIONS.length;
+    document.getElementById('progress-pillar').textContent = QUESTIONS[currentQuestion].pillarLabel;
+}
+
+function renderQuestion(index) {
+    currentQuestion = index;
+    updateProgress();
+    const q = QUESTIONS[index];
+    let html = `<div class="quiz-card active">
+        <div class="pillar-badge ${q.badgeClass}">${q.pillarLabel}</div>
+        <h2>${q.question}</h2><div class="options">`;
+    q.options.forEach((opt, i) => {
+        const sel = answers[index] === i ? 'selected' : '';
+        html += `<div class="option ${sel}" onclick="selectOption(${i})">
+            <div class="option-radio"></div><div class="option-text">${opt.text}</div></div>`;
+    });
+    html += `</div><div class="quiz-nav">`;
+    if (index > 0) html += `<button class="btn-back" onclick="goBack()">&larr; Back</button>`;
+    const isLast = index === QUESTIONS.length - 1;
+    html += `<button class="btn-primary" id="next-btn" onclick="${isLast ? 'showResults()' : 'goNext()'}" ${answers[index] === null ? 'disabled' : ''}>${isLast ? 'See My Results' : 'Next &rarr;'}</button>`;
+    html += `</div></div>`;
+    document.getElementById('quiz-container').innerHTML = html;
+}
+
+function selectOption(i) {
+    answers[currentQuestion] = i;
+    document.querySelectorAll('.option').forEach((el, j) => el.classList.toggle('selected', j === i));
+    document.getElementById('next-btn').disabled = false;
+    if (currentQuestion < QUESTIONS.length - 1) setTimeout(() => goNext(), 300);
+}
+function goNext() { if (answers[currentQuestion] !== null && currentQuestion < QUESTIONS.length - 1) renderQuestion(currentQuestion + 1); }
+function goBack() { if (currentQuestion > 0) renderQuestion(currentQuestion - 1); }
+
+function calcResults() {
+    const pillarScores = {};
+    for (const [key, p] of Object.entries(PILLARS)) {
+        let score = 0;
+        p.questions.forEach(qi => { if (answers[qi] !== null) score += QUESTIONS[qi].options[answers[qi]].score; });
+        const pct = Math.round((score / p.maxScore) * 100);
+        let levelIdx = 0;
+        if (pct >= 85) levelIdx = p.levels.length - 1;
+        else if (pct >= 65) levelIdx = Math.min(p.levels.length - 2, 2);
+        else if (pct >= 40) levelIdx = Math.min(p.levels.length - 2, 1);
+        else levelIdx = 0;
+        pillarScores[key] = { score, max: p.maxScore, pct, level: p.levels[levelIdx], levelIdx };
+    }
+    return pillarScores;
+}
+
+function showResults() {
+    if (answers[currentQuestion] === null) return;
+    document.getElementById('quiz-container').innerHTML = '';
+    document.getElementById('progress').classList.remove('active');
+
+    const ps = calcResults();
+    const firstName = leadData.name ? leadData.name.split(' ')[0] : 'there';
+
+    // Find weakest pillar
+    const sorted = Object.entries(ps).sort((a,b) => a[1].pct - b[1].pct);
+    const weakest = sorted[0];
+    const strongest = sorted[sorted.length - 1];
+
+    // Is mindset the blocker?
+    const mindsetIsLow = ps.mindset.pct < 60;
+
+    let html = `<div class="results active">
+        <div class="results-header">
+            <h1>${firstName}, here's your three-pillar snapshot</h1>
+            <p>See exactly where you are on each pillar — and what's holding you back.</p>
+        </div>`;
+
+    // PILLAR RESULTS
+    for (const [key, p] of Object.entries(PILLARS)) {
+        const s = ps[key];
+        const barColor = s.pct >= 70 ? '#27AE60' : s.pct >= 45 ? p.color : '#E74C3C';
+        html += `<div class="pillar-result">
+            <div class="pillar-result-header">
+                <h3>${p.icon} ${p.label}</h3>
+                <div class="pillar-score" style="color:${barColor}">${s.pct}%</div>
+            </div>
+            <div class="pillar-bar"><div class="pillar-bar-fill" style="background:${barColor}" data-width="${s.pct}%"></div></div>
+            <div class="pillar-position"><div class="position-path">`;
+
+        p.levels.forEach((level, i) => {
+            const isActive = i <= s.levelIdx;
+            const isCurrent = i === s.levelIdx;
+            html += `<div class="position-step ${isCurrent ? 'is-current' : ''}">
+                <div class="position-dot ${isActive ? 'active' : ''} ${isCurrent ? 'current' : ''}"></div>
+                <span>${level}</span></div>`;
+        });
+
+        html += `</div></div>`;
+
+        // Pillar-specific insight
+        const insights = {
+            teaching: s.pct >= 70
+                ? `<strong>Solid foundation.</strong> Your teaching experience is a real asset. Make sure it's visible — employers and students should be able to see your credentials and hours at a glance.`
+                : `<strong>You're building experience.</strong> The Teaching pillar is linear — it takes time. But you can accelerate your professional recognition by tracking your CPD hours and getting your credentials verified.`,
+            business: s.pct >= 70
+                ? `<strong>You're thinking like a business owner.</strong> You've moved beyond trading time for money. Keep diversifying your revenue streams and building your brand.`
+                : s.pct >= 40
+                ? `<strong>You're stuck trading time for money.</strong> Most teachers are. The shift to building a Personal Brand — where you're no longer the product — is the unlock. You don't need more classes. You need a smarter model.`
+                : `<strong>Your business model is limiting you.</strong> Right now you're invisible and underpaid. A Live CV, professional profile, and clear positioning would change that immediately.`,
+            mindset: s.pct >= 70
+                ? `<strong>You're operating above the line.</strong> You've broken through the scarcity trap. This is rare — and it's why the other pillars will come together for you.`
+                : `<strong>This is the blocker.</strong> Your beliefs about money and self-worth are holding back everything else. The scarcity mindset — "I shouldn't charge," "I'll start tomorrow" — is the single biggest threat to your career. This is where Yoga Pros starts.`,
+            safety: s.pct >= 70
+                ? `<strong>Well protected.</strong> You've got your bases covered. Professional insurance and clear safety practices mean you can teach with confidence.`
+                : `<strong>You're exposed.</strong> Without adequate insurance and safety practices, one student injury could end your career. This is the easiest thing to fix — and Professional membership includes the most comprehensive insurance in the industry.`
+        };
+        html += `<p class="pillar-insight">${insights[key]}</p></div>`;
+    }
+
+    // MINDSET CALLOUT
+    if (mindsetIsLow) {
+        html += `<div class="mindset-callout">
+            <div class="mc-score">${ps.mindset.pct}%</div>
+            <div class="mc-label">Wellbeing &amp; Mindset Score</div>
+            <h3>This is why the other pillars are stuck</h3>
+            <p>Your mindset score explains everything. The belief that yoga teachers shouldn't charge, the "I'll start tomorrow" pattern, the feeling that the market is oversaturated — these aren't facts. They're the scarcity mindset talking. Until this shifts, nothing else will.</p>
+        </div>`;
+    }
+
+    // WHAT PROFESSIONAL UNLOCKS — PERSONALISED
+    html += `<div class="unlock-card">
+        <h3>What Professional membership unlocks for you</h3>
+        <p>Based on your results, here's exactly how Yoga Pros Professional addresses your gaps:</p>
+        <ul class="unlock-list">`;
+
+    if (ps.business.pct < 70) {
+        html += `<li><span class="u-check">&#10003;</span> <strong>Live CV</strong> — replaces your website, makes you discoverable by studios and employers</li>`;
+        html += `<li><span class="u-check">&#10003;</span> <strong>Workshops &amp; events promotion</strong> — list them directly on your profile</li>`;
+    }
+    if (ps.teaching.pct < 70) {
+        html += `<li><span class="u-check">&#10003;</span> <strong>Experience badges &amp; CPD tracking</strong> — verified credentials that prove your expertise</li>`;
+        html += `<li><span class="u-check">&#10003;</span> <strong>Growth Path progression</strong> — structured milestones from Teacher to Senior</li>`;
+    }
+    if (ps.safety.pct < 70) {
+        html += `<li><span class="u-check">&#10003;</span> <strong>Professional insurance included</strong> — the most comprehensive cover in UK &amp; Ireland</li>`;
+        html += `<li><span class="u-check">&#10003;</span> <strong>Safety Division guidance</strong> — for you, your business, your students, and employers</li>`;
+    }
+    if (ps.mindset.pct < 70) {
+        html += `<li><span class="u-check">&#10003;</span> <strong>Mindset &amp; wellbeing support</strong> — move from scarcity to abundance with structured guidance</li>`;
+    }
+    html += `<li><span class="u-check">&#10003;</span> <strong>P2P ecosystem</strong> — cover classes, partnerships, referrals, and a network of 10,000+ teachers</li>`;
+    html += `<li><span class="u-check">&#10003;</span> <strong>Optional Brand Page</strong> — build your business identity within the ecosystem</li>`;
+    html += `</ul></div>`;
+
+    // ROI CARD
+    html += `<div class="roi-card">
+        <h3>The maths: doing it alone vs Yoga Pros</h3>
+        <div class="roi-row"><span>Professional insurance</span><span><span class="cost">&pound;10/mo</span> &rarr; <span class="included">&#10003; Included</span></span></div>
+        <div class="roi-row"><span>Your own website</span><span><span class="cost">&pound;15-30/mo</span> &rarr; <span class="included">&#10003; Live CV</span></span></div>
+        <div class="roi-row"><span>CPD tracking &amp; accreditation</span><span><span class="cost">DIY</span> &rarr; <span class="included">&#10003; Included</span></span></div>
+        <div class="roi-row"><span>Cover classes &amp; opportunities</span><span><span class="cost">None</span> &rarr; <span class="included">&#10003; Included</span></span></div>
+        <div class="roi-row"><span>Professional community</span><span><span class="cost">None</span> &rarr; <span class="included">&#10003; 10,000+</span></span></div>
+        <div class="roi-total-row"><span>Doing it alone: &pound;25+/mo</span><span class="teal">Yoga Pros: &pound;12/mo</span></div>
+    </div>`;
+
+    // CTA
+    html += `<div class="cta-card">
+        <h3>Your career won't fix itself. But this will.</h3>
+        <p>Professional membership gives you everything your results say you need — insurance, Live CV, Growth Path, community, and the mindset shift framework.</p>
+        <div class="cta-price">&pound;12 <small>/month</small></div>
+        <div class="cta-period">Billed annually. Insurance included. Cancel anytime.</div>
+        <a href="index.html#pricing" class="btn-primary btn-yellow">Join Professional Now &rarr;</a>
+        <p class="cta-note">10,000+ teachers already building sustainable careers.</p>
+    </div>`;
+
+    // EXCUSES
+    html += `<div class="excuses">
+        <h4>Still hesitating? That's the scarcity mindset.</h4>
+        <div class="excuse"><span class="strike">"I'll start next month"</span> &mdash; <span class="rebuttal">You said that last month. The market is growing without you.</span></div>
+        <div class="excuse"><span class="strike">"I don't have time"</span> &mdash; <span class="rebuttal">You just spent 3 minutes proving you need this.</span></div>
+        <div class="excuse"><span class="strike">"I can't afford &pound;12/month"</span> &mdash; <span class="rebuttal">You're paying &pound;25+/mo doing it alone. This saves you money.</span></div>
+        <div class="excuse"><span class="strike">"It won't work for me"</span> &mdash; <span class="rebuttal">It's working for 10,000+ teachers in 100+ countries.</span></div>
+    </div>`;
+
+    html += `<div class="share-row">
+        <button onclick="window.print()">&#128424; Print results</button>
+        <button onclick="retakeQuiz()">&#128260; Retake quiz</button>
+    </div></div>`;
+
+    document.getElementById('results-screen').innerHTML = html;
+    document.getElementById('results-screen').classList.add('active');
+
+    // Animate bars
+    setTimeout(() => {
+        document.querySelectorAll('.pillar-bar-fill').forEach(bar => { bar.style.width = bar.dataset.width; });
+    }, 200);
+
+    // Store results
+    localStorage.setItem('yogapros_results', JSON.stringify([...(JSON.parse(localStorage.getItem('yogapros_results')||'[]')), { ...leadData, pillars: ps }]));
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function retakeQuiz() {
+    answers = new Array(QUESTIONS.length).fill(null);
+    document.getElementById('results-screen').innerHTML = '';
+    document.getElementById('results-screen').classList.remove('active');
+    document.getElementById('intro-screen').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
