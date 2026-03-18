@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YogaPros Development Accredited Training — What This Badge Means For You</title>
+    <meta name="description" content="You're already a qualified yoga teacher. When you invest in further training, you deserve to know the course meets the highest professional standards. Here's what the YogaPros Development badge guarantees.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #261f46; --navy-light: #3a3160;
+            --orange: #f09221; --orange-dark: #d9831d;
+            --sage: #7eb9a6; --sage-dark: #6aa594;
+            --lavender: #aaa6dc; --lavender-light: #f6f5ff;
+            --peach: #fdf0e0; --mint: #e3fff8;
+            --text: #2D3436; --text-light: #636E72;
+            --white: #FFFFFF; --off-white: #FAFCFB; --border: #E8EFED;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', -apple-system, sans-serif; color: var(--text); line-height: 1.7; background: var(--white); }
+        h1, h2, h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: var(--navy); }
+
+        /* NAV */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--navy); text-decoration: none; letter-spacing: 5px; text-transform: uppercase; }
+        .logo span { color: var(--sage); }
+        .nav-back { color: var(--text-light); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        .nav-back:hover { color: var(--orange); }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+        section { padding: 5rem 2.5rem; }
+        .section-label { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, var(--peach) 0%, var(--white) 100%); padding: 5rem 2.5rem 4rem; text-align: center; }
+        .hero h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin-bottom: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero .hero-sub { font-size: 1.1rem; color: var(--text-light); font-weight: 300; max-width: 680px; margin: 0 auto 2rem; line-height: 1.8; }
+        .hero-badge-label { display: inline-block; background: var(--orange); color: var(--white); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 2rem; }
+
+        /* TRUST OPENER */
+        .trust-opener { background: var(--white); }
+        .trust-opener h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.5rem; }
+        .trust-opener p { font-size: 1rem; font-weight: 300; color: var(--text); max-width: 800px; line-height: 1.8; margin-bottom: 1rem; }
+        .trust-opener strong { font-weight: 600; }
+
+        /* TWO TIERS */
+        .two-tiers { background: var(--off-white); }
+        .two-tiers h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; text-align: center; }
+        .two-tiers .tiers-sub { text-align: center; font-size: 1rem; font-weight: 300; color: var(--text-light); max-width: 700px; margin: 0 auto 3rem; }
+        .tier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .tier-card { background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); }
+        .tier-card.specialist { border-color: var(--orange); border-width: 2px; }
+        .tier-label { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1rem; }
+        .tier-label.regular { background: var(--lavender-light); color: var(--navy); }
+        .tier-label.specialist { background: var(--orange); color: var(--white); }
+        .tier-card h3 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .tier-card > p { font-size: 0.92rem; font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
+        .tier-reqs { list-style: none; }
+        .tier-reqs li { font-size: 0.9rem; font-weight: 400; padding: 0.5rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid var(--border); }
+        .tier-reqs li:last-child { border-bottom: none; }
+        .tier-reqs li::before { content: '✓'; position: absolute; left: 0; color: var(--sage); font-weight: 700; }
+
+        /* SPECIALTIES */
+        .specialties { background: var(--white); }
+        .specialties h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; }
+        .specialties .spec-sub { font-size: 1rem; font-weight: 300; color: var(--text-light); max-width: 700px; margin-bottom: 2.5rem; line-height: 1.8; }
+        .specialty-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2.5rem; }
+        .specialty-tag { background: var(--peach); color: var(--navy); padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; }
+        .spec-highlight { background: var(--mint); padding: 2rem; border-radius: 16px; }
+        .spec-highlight p { font-size: 0.95rem; font-weight: 300; line-height: 1.8; }
+        .spec-highlight strong { font-weight: 700; }
+
+        /* PRE-RECORDED CLARITY */
+        .pre-recorded { background: var(--navy); color: var(--white); }
+        .pre-recorded h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.5rem; }
+        .pre-recorded .pr-sub { color: rgba(255,255,255,0.7); font-weight: 300; max-width: 700px; margin-bottom: 2.5rem; }
+        .pr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .pr-card { padding: 2rem; border-radius: 16px; }
+        .pr-card.foundation { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
+        .pr-card.development { background: rgba(240,146,33,0.1); border: 1px solid rgba(240,146,33,0.3); }
+        .pr-card-label { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1rem; }
+        .pr-card.foundation .pr-card-label { color: var(--sage); }
+        .pr-card.development .pr-card-label { color: var(--orange); }
+        .pr-card h3 { color: var(--white); font-size: 1.15rem; margin-bottom: 0.8rem; }
+        .pr-card p { color: rgba(255,255,255,0.8); font-size: 0.92rem; font-weight: 300; line-height: 1.8; }
+        .pr-card strong { color: var(--white); font-weight: 600; }
+
+        /* VALUE STACK */
+        .value-stack { background: var(--off-white); }
+        .value-stack h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; text-align: center; }
+        .value-stack .stack-sub { text-align: center; font-size: 1rem; font-weight: 300; color: var(--text-light); max-width: 700px; margin: 0 auto 3rem; }
+        .stack-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .stack-card { background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); transition: all 0.3s; }
+        .stack-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .stack-number { font-family: 'Instrument Serif', serif; font-size: 2.5rem; color: var(--orange); opacity: 0.4; line-height: 1; margin-bottom: 0.5rem; }
+        .stack-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .stack-card p { font-size: 0.92rem; font-weight: 300; line-height: 1.8; color: var(--text); }
+        .stack-card .card-highlight { background: var(--peach); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-size: 0.88rem; font-weight: 500; color: var(--navy); }
+
+        /* SOCIAL PROOF */
+        .social-proof { background: var(--white); }
+        .social-proof h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; }
+        .social-proof .proof-sub { font-size: 1rem; font-weight: 300; color: var(--text-light); max-width: 700px; margin-bottom: 3rem; }
+        .proof-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+        .proof-step { text-align: center; padding: 2rem; }
+        .step-num { width: 48px; height: 48px; background: var(--orange); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; margin: 0 auto 1.2rem; }
+        .proof-step h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+        .proof-step p { font-size: 0.9rem; font-weight: 300; color: var(--text); line-height: 1.7; }
+        .proof-highlight { background: var(--peach); border-radius: 16px; padding: 2.5rem; text-align: center; }
+        .proof-highlight p { font-size: 1.05rem; font-weight: 400; color: var(--navy); line-height: 1.8; max-width: 700px; margin: 0 auto; }
+        .proof-highlight strong { font-weight: 700; }
+        .proof-questions { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+        .proof-q { background: var(--white); border-radius: 12px; padding: 1.5rem; text-align: center; border: 1px solid var(--border); }
+        .proof-q .stars { font-size: 1.4rem; margin-bottom: 0.5rem; }
+        .proof-q p { font-size: 0.92rem; font-weight: 600; color: var(--navy); font-style: italic; }
+
+        /* DM SECTION */
+        .dm-section { background: var(--lavender-light); }
+        .dm-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.2rem; }
+        .dm-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .dm-text p { font-size: 1rem; font-weight: 300; line-height: 1.8; margin-bottom: 1rem; }
+        .dm-text strong { font-weight: 600; }
+        .dm-box { background: var(--white); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); }
+        .dm-box h3 { font-size: 1.2rem; margin-bottom: 1.5rem; text-align: center; }
+        .dm-convo { display: flex; flex-direction: column; gap: 1rem; }
+        .dm-msg { padding: 1rem 1.2rem; border-radius: 12px; font-size: 0.88rem; font-weight: 400; line-height: 1.6; max-width: 85%; }
+        .dm-msg.you { background: var(--peach); align-self: flex-end; border-bottom-right-radius: 4px; }
+        .dm-msg.grad { background: var(--mint); align-self: flex-start; border-bottom-left-radius: 4px; }
+        .dm-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); margin-bottom: 0.3rem; }
+
+        /* BADGE ON YOUR CV */
+        .badge-cv { background: var(--white); }
+        .badge-cv h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; }
+        .badge-cv .cv-sub { font-size: 1rem; font-weight: 300; color: var(--text-light); max-width: 700px; margin-bottom: 3rem; line-height: 1.8; }
+        .cv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .cv-card { background: var(--off-white); border-radius: 16px; padding: 2rem; }
+        .cv-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+        .cv-card p { font-size: 0.88rem; font-weight: 300; line-height: 1.7; }
+        .cv-card ul { list-style: none; margin-top: 0.8rem; }
+        .cv-card ul li { font-size: 0.88rem; font-weight: 300; padding: 0.3rem 0; padding-left: 1.2rem; position: relative; }
+        .cv-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+
+        /* WHAT TO ASK */
+        .what-to-ask { background: var(--off-white); }
+        .what-to-ask h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.8rem; }
+        .what-to-ask .ask-sub { font-size: 1rem; font-weight: 300; color: var(--text-light); max-width: 700px; margin-bottom: 2.5rem; }
+        .question-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .question-card { padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); background: var(--white); }
+        .question-card.good { border-left: 4px solid var(--orange); }
+        .q-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; color: var(--orange); }
+        .question-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .question-card p { font-size: 0.88rem; font-weight: 300; line-height: 1.7; }
+
+        /* BOTTOM LINE */
+        .bottom-line { background: var(--navy); color: var(--white); text-align: center; }
+        .bottom-line h2 { color: var(--white); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.2rem; }
+        .bottom-line p { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto 1rem; line-height: 1.8; }
+        .bottom-line .closing-line { color: var(--orange); font-weight: 600; font-size: 1.1rem; margin-top: 1.5rem; }
+        .bottom-line .btn-cta { display: inline-block; background: var(--orange); color: var(--white); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.05rem; margin-top: 2rem; transition: all 0.3s; }
+        .bottom-line .btn-cta:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(240,146,33,0.4); }
+
+        /* FOOTER */
+        footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 2rem; font-size: 0.8rem; font-weight: 300; border-top: 1px solid rgba(255,255,255,0.08); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            section { padding: 3.5rem 1.5rem; }
+            .stack-grid, .proof-flow, .cv-grid, .question-grid, .tier-grid, .pr-grid { grid-template-columns: 1fr; }
+            .dm-content { grid-template-columns: 1fr; }
+            .proof-questions { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">Yoga<span>Pros</span></a>
+    <a href="accreditation.html" class="nav-back">&larr; Back to Accreditation</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge-label">Development Accredited Training</div>
+        <h1>What this badge means for you</h1>
+        <p class="hero-sub">You're a qualified yoga teacher investing in your professional development. This badge tells you the course meets independently verified standards — and that every hour you invest will genuinely advance your career, your skills, and your credibility.</p>
+    </div>
+</section>
+
+<!-- ===== TRUST OPENER ===== -->
+<section class="trust-opener">
+    <div class="container">
+        <span class="section-label">The reality</span>
+        <h2>CPD in yoga is a wild west</h2>
+        <p>There are thousands of "advanced" workshops, specialist trainings, and CPD courses in the yoga world. Some are transformative. Some are a weekend retreat with a certificate bolted on.</p>
+        <p><strong>As a qualified professional, you deserve to know the difference before you invest your time and money.</strong> The YogaPros Development Accredited Training badge tells you the course has been independently verified against professional standards — standards designed specifically for further training of qualified teachers.</p>
+        <p>This isn't Foundation training. You're already qualified. The standards recognise that — while still protecting you from courses that dilute the value of your investment.</p>
+    </div>
+</section>
+
+<!-- ===== TWO TIERS ===== -->
+<section class="two-tiers">
+    <div class="container">
+        <span class="section-label">Two types of development</span>
+        <h2>Regular and Specialist — different standards for different risks</h2>
+        <p class="tiers-sub">Not all further training carries the same risk. A breathwork workshop is different from pregnancy yoga training. The standards reflect that distinction.</p>
+
+        <div class="tier-grid">
+            <div class="tier-card">
+                <div class="tier-label regular">Regular Development</div>
+                <h3>Continuing professional development</h3>
+                <p>Further training to deepen your skills, expand your knowledge, and maintain your professional edge. Workshops, intensives, and CPD courses for qualified teachers.</p>
+                <ul class="tier-reqs">
+                    <li>Minimum 28 hours total</li>
+                    <li>Pre-recorded content accepted (you're a qualified professional)</li>
+                    <li>Assessment must be live — in person or via Zoom</li>
+                    <li>Lead trainer: EYT or equivalent (min 4yrs / 2,000hrs)</li>
+                    <li>For existing qualified yoga teachers only</li>
+                </ul>
+            </div>
+            <div class="tier-card specialist">
+                <div class="tier-label specialist">Specialist Development</div>
+                <h3>Higher-risk specialist training</h3>
+                <p>Training in specialist categories that require hands-on competence. These carry higher risk — pregnancy, trauma, kids, cancer — and earn a verified specialty badge on your Live CV.</p>
+                <ul class="tier-reqs">
+                    <li>Minimum 28 contact hours, 40 total hours</li>
+                    <li>Must be delivered live — in person or online</li>
+                    <li>No pre-recorded content — the risk demands it</li>
+                    <li>Lead trainer: EYT or equivalent (min 4yrs / 2,000hrs in topic)</li>
+                    <li>Earns a verified specialty badge on your Live CV</li>
+                    <li>Only qualified teachers can claim these specialties</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SPECIALTIES ===== -->
+<section class="specialties">
+    <div class="container">
+        <span class="section-label">Verified specialties</span>
+        <h2>18 specialist categories — each earns a verified badge</h2>
+        <p class="spec-sub">Complete specialist training in any of these categories to earn a verified badge on your Live CV — visible to employers, studios, and students searching for specialist teachers. These aren't self-declared. They're verified.</p>
+
+        <div class="specialty-grid">
+            <div class="specialty-tag">Acro Yoga</div>
+            <div class="specialty-tag">Aerial Yoga</div>
+            <div class="specialty-tag">Ayurvedic Massage</div>
+            <div class="specialty-tag">Fertility Yoga</div>
+            <div class="specialty-tag">Kids Yoga</div>
+            <div class="specialty-tag">Meditation &amp; Mindfulness</div>
+            <div class="specialty-tag">Menopause Yoga</div>
+            <div class="specialty-tag">Post-Natal Yoga</div>
+            <div class="specialty-tag">Pranayama &amp; Breathwork</div>
+            <div class="specialty-tag">Pregnancy Yoga</div>
+            <div class="specialty-tag">Sports Yoga</div>
+            <div class="specialty-tag">Thai Yoga Massage</div>
+            <div class="specialty-tag">Trauma-Informed Yoga</div>
+            <div class="specialty-tag">Yoga for Cancer</div>
+            <div class="specialty-tag">Yoga for Mental Health</div>
+            <div class="specialty-tag">Yoga for Teens</div>
+            <div class="specialty-tag">Yoga Nidra</div>
+            <div class="specialty-tag">Yogalates</div>
+        </div>
+
+        <div class="spec-highlight">
+            <p>When a student searches for a pregnancy yoga teacher, a studio looks for a trauma-informed specialist, or an employer needs a kids yoga teacher — <strong>a verified badge from the global professional body is the strongest signal you can show.</strong> It's not a claim. It's a credential.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRE-RECORDED CLARITY ===== -->
+<section class="pre-recorded">
+    <div class="container">
+        <span class="section-label" style="color: var(--orange);">An important distinction</span>
+        <h2>Pre-recorded content: why Development is different from Foundation</h2>
+        <p class="pr-sub">This is one of the most misunderstood areas in yoga training accreditation. Here's the clear distinction:</p>
+
+        <div class="pr-grid">
+            <div class="pr-card foundation">
+                <div class="pr-card-label">Foundation Training</div>
+                <h3>Pre-recorded content: never accepted</h3>
+                <p>You cannot learn to teach yoga from a video. Foundation training requires 180 minimum contact hours with a Senior Yoga Teacher who has 8,000+ hours of experience. There are no shortcuts to becoming a qualified teacher.</p>
+            </div>
+            <div class="pr-card development">
+                <div class="pr-card-label">Development Training</div>
+                <h3>Pre-recorded content: accepted for qualified teachers</h3>
+                <p>You're already a qualified professional. You can learn new material through pre-recorded content — just as a doctor watches pre-recorded lectures for CPD. The difference: <strong>assessment is always live</strong> (in person or via Zoom). You prove competence face to face. The exception: Specialist categories are always delivered live — the risk demands it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VALUE STACK ===== -->
+<section class="value-stack">
+    <div class="container">
+        <span class="section-label">What you get</span>
+        <h2>What this badge guarantees for your investment</h2>
+        <p class="stack-sub">Every one of these is independently verified by YogaPros — the global professional body for yoga teachers.</p>
+
+        <div class="stack-grid">
+            <div class="stack-card">
+                <div class="stack-number">01</div>
+                <h3>Your trainer has 4+ years and 2,000+ hours in this specific topic</h3>
+                <p>Not general teaching experience — experience in the actual subject they're teaching you. A pregnancy yoga trainer must have 2,000+ hours of pregnancy yoga experience. A trauma specialist must have the equivalent in trauma-informed work. Verified, not claimed.</p>
+            </div>
+
+            <div class="stack-card">
+                <div class="stack-number">02</div>
+                <h3>Assessment is always live — you prove competence face to face</h3>
+                <p>Whether the course content is delivered live or includes pre-recorded elements, your assessment is always conducted in real time — in person or via Zoom. You demonstrate what you've learned. No multiple-choice tests. No automated quizzes. A qualified professional assesses your actual competence.</p>
+            </div>
+
+            <div class="stack-card">
+                <div class="stack-number">03</div>
+                <h3>Verified graduate reviews from teachers who completed the same course</h3>
+                <p>Read what other qualified teachers thought — not hand-picked testimonials, but verified reviews from professionals who actually completed this training. Did they gain practical skills? Would they train with this person again? You can see this before you commit.</p>
+            </div>
+
+            <div class="stack-card">
+                <div class="stack-number">04</div>
+                <h3>DM past graduates directly on an independent platform</h3>
+                <p>Message any graduate reviewer through YogaPros — no input from the trainer. Ask them privately: Was it worth the investment? Did the skills transfer to real teaching? Would they do it again? Independent conversations on the global professional body platform.</p>
+            </div>
+
+            <div class="stack-card">
+                <div class="stack-number">05</div>
+                <h3>Specialist courses add a verified badge to your Live CV</h3>
+                <p>Complete a specialist course and earn a verified badge on your Live CV — visible to studios, employers, and students. "Pregnancy Yoga Specialist" or "Trauma-Informed Teacher" — these aren't self-declared. They're verified by the industry's global professional body.</p>
+            </div>
+
+            <div class="stack-card">
+                <div class="stack-number">06</div>
+                <h3>The course is reviewed annually — not just at accreditation</h3>
+                <p>YogaPros reviews every trainer account and their courses annually. Combined with continuous graduate reviews, quality is monitored year-round. You're not investing in a course that was good five years ago and hasn't been checked since.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SOCIAL PROOF ===== -->
+<section class="social-proof">
+    <div class="container">
+        <span class="section-label">Independent verification</span>
+        <h2>Read verified reviews from teachers who've done this course</h2>
+        <p class="proof-sub">Every graduate from a YogaPros-accredited course can leave a verified review — they don't need to be a YogaPros member. We verify they actually completed the course.</p>
+
+        <div class="proof-questions">
+            <div class="proof-q">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Do you feel confident and ready to teach this specialty?"</p>
+            </div>
+            <div class="proof-q">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Would you work with this trainer again?"</p>
+            </div>
+        </div>
+
+        <div class="proof-flow">
+            <div class="proof-step">
+                <div class="step-num">1</div>
+                <h3>Find</h3>
+                <p>Find the trainer's Brand Profile on YogaPros. See their credentials, experience, accreditation status, and every verified review they've received.</p>
+            </div>
+            <div class="proof-step">
+                <div class="step-num">2</div>
+                <h3>Read</h3>
+                <p>Read reviews from qualified teachers who completed this exact course. Real professionals giving honest feedback — hosted on an independent platform, not the trainer's website.</p>
+            </div>
+            <div class="proof-step">
+                <div class="step-num">3</div>
+                <h3>Ask</h3>
+                <p>Message any reviewer directly through YogaPros. Private conversation. No trainer involvement. The highest trust signal in the industry.</p>
+            </div>
+        </div>
+
+        <div class="proof-highlight">
+            <p><strong>"Don't take my word for how good the course is — talk directly to past graduates with no input from me, via YogaPros, the global industry-leading professional body."</strong> That's a line no other accreditation gives a trainer. And it's a level of confidence that tells you everything you need to know.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DM GRADUATES ===== -->
+<section class="dm-section">
+    <div class="container">
+        <span class="section-label">The feature that changes everything</span>
+        <h2>Message past graduates directly — teacher to teacher</h2>
+
+        <div class="dm-content">
+            <div class="dm-text">
+                <p>You're a qualified professional. You know the right questions to ask. <strong>YogaPros lets you ask them directly — to teachers who've already completed the course.</strong></p>
+                <p>Was the content practical or theoretical? Did it change how you actually teach? Was the assessment meaningful or a box-tick? How was the trainer's depth of knowledge?</p>
+                <p>These are professional conversations between qualified teachers, hosted on the global professional body platform — with <strong>no involvement from the trainer.</strong></p>
+                <p>No curated testimonials. No cherry-picked reviews. Real answers from real professionals who invested the same time and money you're considering.</p>
+            </div>
+            <div class="dm-box">
+                <h3>Teacher to teacher</h3>
+                <div class="dm-convo">
+                    <div class="dm-msg you">
+                        <div class="dm-label">You</div>
+                        Hi — I'm looking at the prenatal yoga specialist course. Did you feel genuinely more competent afterward?
+                    </div>
+                    <div class="dm-msg grad">
+                        <div class="dm-label">Graduate</div>
+                        Absolutely. I'd been teaching general classes to pregnant students for years, but after this course I realised how much I didn't know. The hands-on adjustment work alone was worth it.
+                    </div>
+                    <div class="dm-msg you">
+                        <div class="dm-label">You</div>
+                        And has the specialist badge actually made a difference professionally?
+                    </div>
+                    <div class="dm-msg grad">
+                        <div class="dm-label">Graduate</div>
+                        Two studios hired me specifically because of it. They could verify it on my Live CV. It's a different conversation when you have a verified credential rather than just saying "I've done a course."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BADGE ON YOUR CV ===== -->
+<section class="badge-cv">
+    <div class="container">
+        <span class="section-label">Career impact</span>
+        <h2>What this training adds to your professional profile</h2>
+        <p class="cv-sub">Every YogaPros-accredited Development course you complete builds your professional record — permanently, verifiably, and publicly.</p>
+
+        <div class="cv-grid">
+            <div class="cv-card">
+                <h3>Live CV grows with you</h3>
+                <p>Every accredited course is recorded on your Live CV — a living professional record that employers, studios, and students can verify at any time.</p>
+                <ul>
+                    <li>Course name and provider</li>
+                    <li>Hours completed</li>
+                    <li>Verified completion status</li>
+                    <li>Date and accreditation level</li>
+                </ul>
+            </div>
+            <div class="cv-card">
+                <h3>Verified specialty badges</h3>
+                <p>Specialist courses earn a visible badge on your profile. When someone searches for "Pregnancy Yoga" or "Trauma-Informed" — you appear with a verified credential, not a self-declared claim.</p>
+                <ul>
+                    <li>Visible on your Brand Profile</li>
+                    <li>Searchable in the ecosystem</li>
+                    <li>Verified by the professional body</li>
+                    <li>18 specialist categories available</li>
+                </ul>
+            </div>
+            <div class="cv-card">
+                <h3>Professional differentiation</h3>
+                <p>In a market where anyone can claim a specialty, a verified badge from the global professional body separates you from teachers making the same claim without the verified training behind it.</p>
+                <ul>
+                    <li>Stand out to studios and employers</li>
+                    <li>Build trust with students</li>
+                    <li>Career progression to EYT/SYT</li>
+                    <li>Pathway to becoming a trainer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHAT TO ASK ===== -->
+<section class="what-to-ask">
+    <div class="container">
+        <span class="section-label">Before you invest</span>
+        <h2>Questions to ask any development course</h2>
+        <p class="ask-sub">If a course carries the YogaPros Development badge, you already know the answers. If it doesn't, ask them.</p>
+
+        <div class="question-grid">
+            <div class="question-card good">
+                <div class="q-label">Ask this</div>
+                <h3>"How many years of experience does the trainer have in this specific topic?"</h3>
+                <p>YogaPros accredited: minimum 4 years / 2,000 hours in the subject. Not general yoga — the actual specialty they're teaching you.</p>
+            </div>
+            <div class="question-card good">
+                <div class="q-label">Ask this</div>
+                <h3>"How is assessment conducted?"</h3>
+                <p>YogaPros accredited: always live. In person or Zoom. A real person watches you demonstrate competence. If it's a multiple-choice quiz, ask yourself if that's enough.</p>
+            </div>
+            <div class="question-card good">
+                <div class="q-label">Ask this</div>
+                <h3>"Can I speak to teachers who've completed this course?"</h3>
+                <p>YogaPros accredited: yes — DM any reviewer directly through the platform. No trainer involvement. If they only offer curated testimonials, why?</p>
+            </div>
+            <div class="question-card good">
+                <div class="q-label">Ask this</div>
+                <h3>"Will this qualification be verified and visible to employers?"</h3>
+                <p>YogaPros accredited: yes — recorded on your Live CV and verifiable by anyone. If the answer is "you get a PDF certificate," consider how much that's worth.</p>
+            </div>
+            <div class="question-card good">
+                <div class="q-label">Ask this</div>
+                <h3>"Is this course accredited by an independent body?"</h3>
+                <p>YogaPros accredited: yes — independently verified by the global professional body. If the answer is "self-certified" or "we've applied," there's a reason they don't have it yet.</p>
+            </div>
+            <div class="question-card good">
+                <div class="q-label">Ask this</div>
+                <h3>"For specialist training — is it delivered live?"</h3>
+                <p>YogaPros accredited specialist: 100% live delivery. Hands-on competence can't be assessed from a video. If they're teaching pregnancy yoga through pre-recorded content, that should concern you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BOTTOM LINE ===== -->
+<section class="bottom-line">
+    <div class="container">
+        <h2>The bottom line</h2>
+        <p>You've already invested years becoming a qualified yoga teacher. When you invest more — in further training, specialist skills, professional development — you deserve to know the course has been held to standards that match your professionalism.</p>
+        <p>The YogaPros Development badge means the trainer is experienced in this specific topic. Your assessment is live. Your reviews are independent. Your graduates are contactable. And every course builds your permanent professional record.</p>
+        <p>You don't have to take the trainer's word for it. You can verify everything — independently — through the global professional body, before you invest a single penny.</p>
+        <p class="closing-line">Your career is built on trust. Make sure your training is too.</p>
+        <a href="index.html#pricing" class="btn-cta">Find accredited Development courses &rarr;</a>
+    </div>
+</section>
+
+<footer>
+    <p>YogaPros &mdash; A standards-led professional body for yoga teachers. Not-for-profit Scottish company (SC502923). Based in Edinburgh.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.stack-card, .proof-step, .proof-q, .tier-card, .pr-card, .specialty-tag, .cv-card, .question-card, .dm-msg').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+</script>
+</body>
+</html>
